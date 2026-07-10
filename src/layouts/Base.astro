@@ -21,6 +21,14 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+  <meta name="theme-color" content="#1E5C4A" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Lodgedwell" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).href} />
+  <meta name="twitter:card" content="summary" />
 </head>
 <body>
   <Header active={active} />
