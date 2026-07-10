@@ -102,6 +102,60 @@
     }
   }
 
+  /* ---- Hero dashboard: animated settlement tracker ---- */
+  (function () {
+    var tracker = document.querySelector(".hero .tracker");
+    if (!tracker) return;
+    var steps = Array.prototype.slice.call(tracker.querySelectorAll(".tracker-step"));
+    if (!steps.length) return;
+    var bar = document.querySelector(".hero .mock-progress > i");
+    var badge = document.querySelector(".hero .mock-badge");
+
+    var CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+    var CLOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+    var DOT   = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/></svg>';
+
+    function render(active, settled) {
+      steps.forEach(function (step, i) {
+        var dot = step.querySelector(".tracker-dot");
+        step.classList.remove("done", "current", "pending");
+        if (settled || i < active) {
+          step.classList.add("done");
+          if (dot) dot.innerHTML = CHECK;
+        } else if (i === active) {
+          step.classList.add("current");
+          if (dot) dot.innerHTML = CLOCK;
+        } else {
+          step.classList.add("pending");
+          if (dot) dot.innerHTML = DOT;
+        }
+      });
+      var last = steps.length - 1;
+      var pct = settled ? 100 : (last > 0 ? Math.round((active / last) * 78 + 12) : 100);
+      if (bar) bar.style.width = pct + "%";
+      if (badge) {
+        badge.textContent = settled ? "Settled" : "On track";
+        badge.classList.toggle("is-settled", !!settled);
+      }
+    }
+
+    // Reduced motion: hold a sensible mid-progress state, no looping.
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      render(2, false);
+      return;
+    }
+
+    var seq = [], k;
+    for (k = 0; k < steps.length; k++) seq.push({ active: k, settled: false });
+    seq.push({ active: steps.length - 1, settled: true }); // all complete
+    var idx = 0;
+    render(seq[0].active, seq[0].settled);
+    setInterval(function () {
+      idx = (idx + 1) % seq.length;
+      render(seq[idx].active, seq[idx].settled);
+    }, 1900);
+  })();
+
   /* ---- Footer year ---- */
   var yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();

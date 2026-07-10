@@ -309,18 +309,23 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
 .mock-badge {
   font-size: .6875rem; font-weight: var(--fw-bold); text-transform: uppercase; letter-spacing: .05em;
   padding: 5px 11px; border-radius: var(--radius-pill); background: var(--green-100); color: var(--green-700);
+  transition: background .4s var(--ease-standard), color .4s var(--ease-standard);
 }
+.mock-badge.is-settled { background: var(--green-600); color: #fff; }
 
 .tracker { display: grid; gap: 0; margin: 4px 0; }
-.tracker-step { display: grid; grid-template-columns: 30px 1fr; gap: 12px; position: relative; padding-bottom: 18px; }
+.tracker-step { display: grid; grid-template-columns: 30px 1fr; gap: 12px; position: relative; padding-bottom: 20px; }
 .tracker-step:last-child { padding-bottom: 0; }
 .tracker-step::before {
   content: ""; position: absolute; left: 14px; top: 26px; bottom: -2px; width: 2px; background: var(--line-200);
+  transition: background .6s var(--ease-standard);
 }
 .tracker-step:last-child::before { display: none; }
 .tracker-dot {
   width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
   background: var(--white); border: 2px solid var(--line-200); color: var(--ink-400); z-index: 1;
+  transition: background .45s var(--ease-standard), border-color .45s var(--ease-standard),
+              color .45s var(--ease-standard), box-shadow .45s var(--ease-standard);
 }
 .tracker-dot svg { width: 15px; height: 15px; }
 .tracker-step.done .tracker-dot { background: var(--green-600); border-color: var(--green-600); color: #fff; }
@@ -334,7 +339,8 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
 .tracker-step.pending .tracker-label { color: var(--ink-400); }
 
 .mock-progress { height: 8px; border-radius: var(--radius-pill); background: var(--green-050); overflow: hidden; }
-.mock-progress > i { display: block; height: 100%; width: 62%; border-radius: var(--radius-pill); background: var(--green-500); }
+.mock-progress > i { display: block; height: 100%; width: 62%; border-radius: var(--radius-pill); background: var(--green-500);
+  transition: width .8s cubic-bezier(.2,.7,.2,1); }
 
 /* floating cards */
 .float-card {
@@ -347,7 +353,7 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
 .float-card small { display: block; font-weight: 500; color: var(--ink-400); font-size: .75rem; }
 .float-1 { top: -22px; left: -30px; }
 .float-1 .ic { background: var(--green-100); color: var(--green-700); }
-.float-2 { bottom: -26px; right: -22px; animation-delay: -3s; }
+.float-2 { bottom: -30px; right: -30px; animation-delay: -3s; }
 .float-2 .ic { background: var(--ochre-100); color: var(--ochre-700); }
 @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 
