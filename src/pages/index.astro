@@ -1,0 +1,334 @@
+---
+import Base from '../layouts/Base.astro';
+const title = "Lodgedwell \u2014 Online conveyancing done well, across Victoria";
+const description = "Lodgedwell is modern online conveyancing for Victorian property. Fixed fees, real-time tracking and a friendly team \u2014 buy or sell with confidence. Onboard online in minutes.";
+---
+<Base title={title} description={description} active="home" tally={false}>
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="pill reveal">
+        <span class="dot"></span> Victorian property conveyancing
+        <span class="tag">100% ONLINE</span>
+      </span>
+      <h1 class="reveal" data-delay="1">Conveyancing, <span class="underline-mark">done well.</span></h1>
+      <p class="lead reveal" data-delay="2">Buying or selling in Victoria? Settle your property the modern way — <span class="serif-accent">fixed fees</span>, real-time tracking, and real humans who pick up the phone.</p>
+      <div class="hero-actions reveal" data-delay="3">
+        <a href="/get-started" class="btn btn--lg">Start online in minutes
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="/pricing" class="btn btn--ghost btn--lg">See fixed pricing</a>
+      </div>
+      <div class="hero-reassure reveal" data-delay="3">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> No lock-in contracts</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Licensed conveyancers</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> PEXA e-settlement</span>
+      </div>
+    </div>
+
+    <!-- Dashboard mock -->
+    <div class="hero-visual reveal" data-delay="2">
+      <div class="float-card float-1">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></span>
+        <span>Contract reviewed<small>in under 24 hours</small></span>
+      </div>
+      <div class="float-card float-2">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <span>Fixed fee<small>no surprises</small></span>
+      </div>
+      <div class="mock" role="img" aria-label="Lodgedwell client dashboard showing a purchase matter progressing to settlement">
+        <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">app.lodgedwell.com.au</span></div>
+        <div class="mock-body">
+          <div class="mock-row">
+            <span class="mock-title">Your purchase · 14 Rosella St</span>
+            <span class="mock-badge">On track</span>
+          </div>
+          <div class="mock-progress"><i></i></div>
+          <div class="tracker">
+            <div class="tracker-step done">
+              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><span class="tracker-label">Details submitted</span><span class="tracker-sub">Online form completed</span></span>
+            </div>
+            <div class="tracker-step done">
+              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><span class="tracker-label">Contract review</span><span class="tracker-sub">Section 32 checked</span></span>
+            </div>
+            <div class="tracker-step current">
+              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span><span class="tracker-label">Preparing for settlement</span><span class="tracker-sub">PEXA workspace created</span></span>
+            </div>
+            <div class="tracker-step pending">
+              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
+              <span><span class="tracker-label">Settlement &amp; keys</span><span class="tracker-sub">Est. 12 Aug</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="trust">
+  <div class="container trust-inner">
+    <span class="trust-label">Built for Victorian property</span>
+    <div class="trust-items">
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg> 4.9★ average rating</span>
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> PEXA certified e-settlement</span>
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Fully insured &amp; licensed</span>
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Melbourne &amp; regional VIC</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PATH CHOOSER ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:44px">
+      <span class="eyebrow">Where to begin</span>
+      <h2>Two clear paths, one smooth settlement</h2>
+      <p class="lead">Tell us whether you're buying or selling and complete a guided online form. We take it from there — you can follow every step from your phone.</p>
+    </div>
+    <div class="path-grid">
+      <div class="path-card buy reveal">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+        <h3>I'm buying</h3>
+        <p>Bought at auction or by private sale? Get your contract reviewed and glide to settlement. Complete the buying questionnaire and we'll be in touch within one business day.</p>
+        <a href="/get-started#buy" class="btn">Start buying <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="path-card sell reveal" data-delay="1">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M14 3l7 7M21 3l-2 8"/></svg></span>
+        <h3>I'm selling</h3>
+        <p>Selling your Victorian property? We'll prepare your Section 32 vendor statement and contract of sale so you're ready to hit the market. Kick off with the property sales form.</p>
+        <a href="/get-started#sell" class="btn btn--coral">Start selling <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section" style="background:var(--cream-200);border-block:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:60px">
+      <span class="eyebrow">How it works</span>
+      <h2>Settle in four simple steps</h2>
+      <p class="lead">No jargon, no waiting rooms, no mystery invoices. Just a clear path from offer to keys.</p>
+    </div>
+    <div class="grid cols-4">
+      <div class="card step-card reveal"><span class="step-num">1</span>
+        <h3>Onboard online</h3>
+        <p>Complete a short guided form on any device. It takes about 10 minutes and there's no paperwork to print.</p>
+      </div>
+      <div class="card step-card reveal" data-delay="1"><span class="step-num">2</span>
+        <h3>We review everything</h3>
+        <p>A licensed conveyancer checks your contract and Section 32, and flags anything you should know — fast.</p>
+      </div>
+      <div class="card step-card reveal" data-delay="2"><span class="step-num">3</span>
+        <h3>Track in real time</h3>
+        <p>Follow every milestone from your dashboard and get proactive updates. No more chasing for a status.</p>
+      </div>
+      <div class="card step-card reveal" data-delay="3"><span class="step-num">4</span>
+        <h3>Settle with PEXA</h3>
+        <p>We handle electronic settlement end-to-end so funds and title change hands securely — then you get the keys.</p>
+      </div>
+    </div>
+    <div class="center reveal" style="margin-top:44px">
+      <a href="/how-it-works" class="arrow-link">See the full process <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY / SPLIT ================= -->
+<section class="section">
+  <div class="container split">
+    <div class="split-copy reveal">
+      <span class="eyebrow">Why Lodgedwell</span>
+      <h2>Old-school care, meet new-school speed</h2>
+      <p class="lead">Traditional conveyancing shouldn't mean phone tag and vague fees. We pair experienced Victorian conveyancers with technology that keeps you in the loop the whole way.</p>
+      <ul class="check-list" style="margin-top:26px">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>One transparent fixed fee.</b> Quoted up front, with disbursements listed line by line.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>A real person on your matter.</b> Named conveyancer, direct line, replies that actually land.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Secure e-signing &amp; e-settlement.</b> Sign from the couch; settle through PEXA.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Built for Victoria.</b> Section 32, stamp duty, first-home concessions — we live and breathe VIC.</span></li>
+      </ul>
+      <div style="margin-top:30px"><a href="/services" class="btn">Explore our services</a></div>
+    </div>
+    <div class="split-media reveal" data-delay="1">
+      <div class="stat-panel">
+        <h3 style="color:#fff;font-size:1.4rem;margin-bottom:24px">The Lodgedwell difference</h3>
+        <div class="stat-grid">
+          <div class="stat"><b><span data-count="2400" data-prefix="" data-suffix="+">0</span></b><span>Victorian settlements guided</span></div>
+          <div class="stat"><b class="accent"><span data-count="4.9" data-suffix="★">0</span></b><span>Average client rating</span></div>
+          <div class="stat"><b><span data-count="24" data-suffix="h">0</span></b><span>Typical contract turnaround</span></div>
+          <div class="stat"><b class="accent"><span data-count="100" data-suffix="%">0</span></b><span>Online, on your schedule</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES / SERVICES PREVIEW ================= -->
+<section class="section" style="background:var(--cream-200);border-block:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:48px">
+      <span class="eyebrow">What we handle</span>
+      <h2>Everything the transfer needs</h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+        <h3>Contract &amp; Section 32 review</h3>
+        <p>We read the fine print so you don't have to, and explain what matters in plain English before you're bound.</p>
+      </div>
+      <div class="card card--coral reveal" data-delay="1">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <h3>Stamp duty &amp; concessions</h3>
+        <p>We calculate your land transfer duty and check first-home, pensioner and off-the-plan concessions.</p>
+      </div>
+      <div class="card card--amber reveal" data-delay="2">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6 4 4 8-8"/><path d="M14 7h6v6"/></svg></span>
+        <h3>PEXA electronic settlement</h3>
+        <p>Faster, safer settlements with funds and title exchanged digitally — no bank cheques, no couriers.</p>
+      </div>
+    </div>
+    <div class="center reveal" style="margin-top:40px">
+      <a href="/services" class="arrow-link">View all services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING PREVIEW ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:52px">
+      <span class="eyebrow">Fixed-fee pricing</span>
+      <h2>Know the price before you begin</h2>
+      <p class="lead">One clear fee per matter. Government charges and search fees (disbursements) are listed separately at cost — nothing hidden.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <span class="price-name">Sale</span>
+        <p class="price-desc">Selling a Victorian home or investment property.</p>
+        <div class="price-amount"><span class="cur">$</span><span class="num">880</span><span class="per">fixed*</span></div>
+        <p class="price-note">+ disbursements at cost</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Section 32 vendor statement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Contract of sale prepared</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>PEXA settlement managed</li>
+        </ul>
+        <a href="/get-started#sell" class="btn btn--ghost btn--block">Start selling</a>
+      </div>
+      <div class="price-card featured reveal" data-delay="1">
+        <span class="price-badge">Most popular</span>
+        <span class="price-name">Purchase</span>
+        <p class="price-desc">Buying your next home or investment in VIC.</p>
+        <div class="price-amount"><span class="cur">$</span><span class="num">990</span><span class="per">fixed*</span></div>
+        <p class="price-note">+ disbursements at cost</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Contract &amp; Section 32 review</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Stamp duty &amp; concessions</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>PEXA settlement &amp; title transfer</li>
+        </ul>
+        <a href="/get-started#buy" class="btn btn--block">Start buying</a>
+      </div>
+      <div class="price-card reveal" data-delay="2">
+        <span class="price-name">Transfer</span>
+        <p class="price-desc">Adding, removing or gifting a name on title.</p>
+        <div class="price-amount"><span class="cur">$</span><span class="num">660</span><span class="per">fixed*</span></div>
+        <p class="price-note">+ disbursements at cost</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Related-party transfers</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Duty &amp; exemption checks</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Title lodgement handled</li>
+        </ul>
+        <a href="/get-started" class="btn btn--ghost btn--block">Enquire now</a>
+      </div>
+    </div>
+    <p class="center" style="margin-top:24px;font-size:.85rem;color:var(--muted)">*Indicative fixed fees shown for illustration. You'll receive a firm, itemised quote before any work begins.</p>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section" style="background:var(--cream-200);border-block:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:48px">
+      <span class="eyebrow">Loved by Victorians</span>
+      <h2>First-home buyers to seasoned investors</h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="quote-card reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
+        </div>
+        <blockquote>"First home, no idea what I was doing. Lodgedwell explained every step and the tracker meant I always knew where things were at. Settled early!"</blockquote>
+        <div class="quote-author"><span class="avatar" style="background:var(--green-500)">MA</span><span><b>Maya A.</b><span>First-home buyer · Preston</span></span></div>
+      </div>
+      <div class="quote-card reveal" data-delay="1">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
+        </div>
+        <blockquote>"Sold our place in Geelong and bought in the same month. Fixed fee both ways, no nasty surprises, and someone actually answered when I called."</blockquote>
+        <div class="quote-author"><span class="avatar" style="background:var(--coral)">DT</span><span><b>Daniel &amp; Trish</b><span>Upsizers · Geelong</span></span></div>
+      </div>
+      <div class="quote-card reveal" data-delay="2">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
+        </div>
+        <blockquote>"As an investor I do a few of these a year. Doing it all online, signing on my phone, tracking settlement — this is how it should work in 2026."</blockquote>
+        <div class="quote-author"><span class="avatar" style="background:var(--amber);color:#4a2c00">RK</span><span><b>Raj K.</b><span>Property investor · Melbourne</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:44px">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">What exactly is conveyancing?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Conveyancing is the legal process of transferring property ownership from one person to another. It covers reviewing contracts, checking the title, calculating stamp duty, and managing settlement — the moment money and ownership change hands. Lodgedwell handles all of it, online.</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Do you cover all of Victoria?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Yes. We're specialists in Victorian property and act for clients right across the state — from inner Melbourne to Geelong, Ballarat, Bendigo and regional VIC. Because everything is handled online and settled via PEXA, your location is never a barrier.</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">How much does it cost?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>We charge one fixed professional fee per matter, quoted up front. On top of that are disbursements — government and search fees we pay on your behalf — which we list separately at cost. You'll always see a firm, itemised quote before we start.</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">How do I get started?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Choose "buying" or "selling" and complete our short online form — about 10 minutes on any device. A licensed conveyancer will review your details and be in touch within one business day to confirm next steps.</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Is my information secure?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Absolutely. Your details are handled over encrypted connections, documents are signed electronically, and settlement runs through PEXA — Australia's regulated electronic conveyancing network — so funds and title move securely.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="cta-band section-sm">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Ready to settle, the modern way?</h2>
+      <p>Start your Victorian purchase or sale online today. It takes minutes to onboard, and a real conveyancer will be with you within one business day.</p>
+      <div class="cta-actions">
+        <a href="/get-started#buy" class="btn btn--coral btn--lg">I'm buying</a>
+        <a href="/get-started#sell" class="btn btn--ghost btn--lg">I'm selling</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</Base>

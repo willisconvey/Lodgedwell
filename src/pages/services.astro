@@ -1,0 +1,113 @@
+---
+import Base from '../layouts/Base.astro';
+const title = "Services \u2014 Buying, selling &amp; transfers | Lodgedwell";
+const description = "Conveyancing for buying, selling and transferring property in Victoria. Contract reviews, Section 32 statements, stamp duty, PEXA settlement and more.";
+---
+<Base title={title} description={description} active="services" tally={false}>
+<main>
+<section class="page-hero">
+  <span class="blob blob-1"></span>
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="/">Home</a> / Services</p>
+    <div class="section-head reveal" data-delay="1">
+      <span class="eyebrow">What we do</span>
+      <h1>Conveyancing for every kind of Victorian move</h1>
+      <p class="lead">Whether you're buying your first home, selling an investment, or transferring a title within the family — we handle the legal detail so you can get on with life.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BUY / SELL PATHS -->
+<section class="section" style="padding-top:16px">
+  <div class="container">
+    <div class="path-grid">
+      <div class="path-card buy reveal">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+        <h3>Buying a property</h3>
+        <p>Contract and Section 32 review before you sign or bid, stamp duty and concession checks, and full management through to settlement and title transfer.</p>
+        <ul class="check-list" style="margin:8px 0 22px">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Pre-purchase contract review</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>First-home buyer concessions</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Liaison with your lender &amp; agent</li>
+        </ul>
+        <a href="/get-started#buy" class="btn">Start buying <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="path-card sell reveal" data-delay="1">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M14 3l7 7M21 3l-2 8"/></svg></span>
+        <h3>Selling a property</h3>
+        <p>We prepare a compliant Section 32 vendor statement and contract of sale so your agent can list with confidence, then manage settlement to the finish line.</p>
+        <ul class="check-list" style="margin:8px 0 22px">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Section 32 vendor statement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Contract of sale drafting</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Discharge of mortgage coordinated</li>
+        </ul>
+        <a href="/get-started#sell" class="btn btn--coral">Start selling <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL SERVICE GRID -->
+<section class="section" style="background:var(--cream-200);border-block:1px solid var(--line);padding-top:clamp(56px,7vw,96px)">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:48px">
+      <span class="eyebrow">All services</span>
+      <h2>Everything under one fixed fee</h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card reveal"><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span><h3>Contract review</h3><p>Line-by-line review of the contract of sale before you're bound, with the risks explained plainly.</p></div>
+      <div class="card reveal" data-delay="1"><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span><h3>Section 32 statements</h3><p>Preparing or reviewing the vendor statement so nothing about the property is left undisclosed.</p></div>
+      <div class="card card--coral reveal" data-delay="2"><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>Stamp duty &amp; concessions</h3><p>Accurate land transfer duty calculations and checks for first-home, pensioner and other concessions.</p></div>
+      <div class="card card--amber reveal"><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6 4 4 8-8"/><path d="M14 7h6v6"/></svg></span><h3>PEXA settlement</h3><p>Fast, secure electronic settlement — funds and title exchanged digitally, with instant confirmation.</p></div>
+      <div class="card reveal" data-delay="1"><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Title transfers</h3><p>Adding, removing or gifting a name on title — including transfers between family or related parties.</p></div>
+      <div class="card reveal" data-delay="2"><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v6a2 2 0 0 1-2 2A18 18 0 0 1 2 5a2 2 0 0 1 0-2z"/></svg></span><h3>Lender liaison</h3><p>We coordinate with your bank or broker on mortgages, discharges and settlement figures.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIAL SITUATIONS -->
+<section class="section">
+  <div class="container split">
+    <div class="split-copy reveal">
+      <span class="eyebrow">Also covered</span>
+      <h2>The less-common moves, handled too</h2>
+      <p class="lead">Property isn't always a straightforward buy or sell. Whatever your situation in Victoria, there's a good chance we can help — just ask.</p>
+      <ul class="check-list" style="margin-top:24px">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Off-the-plan purchases</b> — sunset clauses, staged deposits and duty timing explained.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Related-party &amp; family transfers</b> — including partner and love-and-affection transfers.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>First-home buyers</b> — we make concessions and the First Home Owner Grant easy to navigate.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Investment &amp; multiple settlements</b> — streamlined for repeat and portfolio buyers.</span></li>
+      </ul>
+      <div style="margin-top:28px"><a href="/get-started" class="btn">Talk to a conveyancer</a></div>
+    </div>
+    <div class="split-media reveal" data-delay="1">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div class="stat-panel" style="border-radius:0">
+          <h3 style="color:#fff;font-size:1.35rem;margin-bottom:8px">Not sure which applies?</h3>
+          <p style="color:rgba(255,255,255,.82);margin-bottom:22px">Start the online form and we'll point you the right way — no obligation, no fee to ask.</p>
+          <a href="/get-started" class="btn btn--coral">Get a fixed-fee quote</a>
+        </div>
+        <div style="padding:26px">
+          <div class="info-row" style="padding:14px 0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></span><div><h4 style="margin:0">Victoria-wide</h4><p style="margin:0">Metro Melbourne and regional VIC.</p></div></div>
+          <div class="info-row" style="padding:14px 0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h4 style="margin:0">Reply within 1 business day</h4><p style="margin:0">A licensed conveyancer, every time.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band section-sm">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>One team for the whole journey</h2>
+      <p>Buying, selling or transferring in Victoria — get started online and we'll take care of the rest.</p>
+      <div class="cta-actions">
+        <a href="/get-started#buy" class="btn btn--coral btn--lg">I'm buying</a>
+        <a href="/get-started#sell" class="btn btn--ghost btn--lg">I'm selling</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</Base>

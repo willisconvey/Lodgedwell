@@ -1,0 +1,28 @@
+---
+const { active = '' } = Astro.props;
+const links = [
+  { href: '/', label: 'Home', key: 'home' },
+  { href: '/how-it-works', label: 'How it works', key: 'how-it-works' },
+  { href: '/services', label: 'Services', key: 'services' },
+  { href: '/pricing', label: 'Pricing', key: 'pricing' },
+  { href: '/about', label: 'About', key: 'about' },
+];
+---
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="brand" aria-label="Lodgedwell home">
+      <span class="logo-word">Lodgedwell<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      {links.map((l) => (
+        <a href={l.href} class={active === l.key ? 'active' : undefined}>{l.label}</a>
+      ))}
+    </nav>
+    <div class="nav-cta">
+      <a href="/get-started" class="btn btn--coral">Get started
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>

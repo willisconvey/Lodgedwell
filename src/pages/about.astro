@@ -1,0 +1,120 @@
+---
+import Base from '../layouts/Base.astro';
+const title = "About \u2014 Why we built Lodgedwell";
+const description = "Lodgedwell brings warmth and technology to Victorian conveyancing. Meet the team making buying and selling property clearer, faster and more human.";
+---
+<Base title={title} description={description} active="about" tally={false}>
+<main>
+<section class="page-hero">
+  <span class="blob blob-1"></span>
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="/">Home</a> / About</p>
+    <div class="section-head reveal" data-delay="1">
+      <span class="eyebrow">Our story</span>
+      <h1>We think conveyancing should feel <span class="serif-accent">human</span></h1>
+      <p class="lead">Lodgedwell was born from a simple frustration: buying and selling property is one of life's biggest moments, yet the legal bit so often feels cold, confusing and slow. We're here to change that — for every Victorian.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION SPLIT -->
+<section class="section" style="padding-top:16px">
+  <div class="container split">
+    <div class="split-copy reveal">
+      <h2>Warmth and technology, together</h2>
+      <p class="lead">Most people meet a conveyancer once or twice in their life. That's exactly why it should be easy, clear and reassuring — not a black box you email and hope to hear back from.</p>
+      <p>We pair genuinely caring, licensed Victorian conveyancers with software that keeps you informed at every step. The result is conveyancing that moves at the speed of modern life, without ever losing the personal touch. You get a named human on your matter and a live dashboard in your pocket — the best of both worlds.</p>
+      <div class="hero-reassure" style="margin-top:8px">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Victoria-focused specialists</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Fully licensed &amp; insured</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> PEXA e-settlement</span>
+      </div>
+    </div>
+    <div class="split-media reveal" data-delay="1">
+      <div class="stat-panel">
+        <h3 style="color:#fff;font-size:1.4rem;margin-bottom:24px">By the numbers</h3>
+        <div class="stat-grid">
+          <div class="stat"><b><span data-count="2400" data-suffix="+">0</span></b><span>Victorian settlements guided</span></div>
+          <div class="stat"><b class="accent"><span data-count="4.9" data-suffix="★">0</span></b><span>Average client rating</span></div>
+          <div class="stat"><b><span data-count="100" data-suffix="%">0</span></b><span>Online &amp; paperless</span></div>
+          <div class="stat"><b class="accent"><span data-count="1" data-suffix=" day">0</span></b><span>Typical first response</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--cream-200);border-block:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:44px">
+      <span class="eyebrow">What we stand for</span>
+      <h2>The values behind every matter</h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-item reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <h4>Radical clarity</h4>
+        <p>No jargon, no hidden fees, no mystery. If you can't understand it, we haven't explained it well enough yet.</p>
+      </div>
+      <div class="value-item reveal" data-delay="1">
+        <span class="ic" style="background:var(--coral-100);color:var(--coral-600)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+        <h4>Genuine care</h4>
+        <p>Behind every matter is a person making a big decision. We treat your property like we'd treat our own.</p>
+      </div>
+      <div class="value-item reveal" data-delay="2">
+        <span class="ic" style="background:var(--amber-100);color:#C7841B"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></span>
+        <h4>Momentum</h4>
+        <p>Property waits for no one. We reply fast, act faster, and keep your settlement moving on time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:44px">
+      <span class="eyebrow">The people</span>
+      <h2>Real conveyancers, on your side</h2>
+      <p class="lead">A small, dedicated Victorian team — so you'll always speak to someone who knows your matter by name.</p>
+    </div>
+    <div class="grid cols-3">
+      <div class="card reveal" style="text-align:center">
+        <span class="avatar" style="width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;font-size:1.6rem;margin:0 auto 16px;background:var(--green-500);font-family:var(--font-display)">JL</span>
+        <h3 style="font-size:1.2rem;margin-bottom:2px">Jordan Lee</h3>
+        <p style="color:var(--coral-600);font-weight:700;font-size:.9rem;margin-bottom:10px">Founder &amp; Licensed Conveyancer</p>
+        <p style="font-size:.95rem">Fifteen years in Victorian property, on a mission to make settlement feel simple and human.</p>
+      </div>
+      <div class="card reveal" data-delay="1" style="text-align:center">
+        <span class="avatar" style="width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;font-size:1.6rem;margin:0 auto 16px;background:var(--coral);font-family:var(--font-display)">PS</span>
+        <h3 style="font-size:1.2rem;margin-bottom:2px">Priya Sharma</h3>
+        <p style="color:var(--coral-600);font-weight:700;font-size:.9rem;margin-bottom:10px">Senior Conveyancer</p>
+        <p style="font-size:.95rem">First-home buyer specialist who loves turning a nervous "help!" into a confident "we did it!".</p>
+      </div>
+      <div class="card reveal" data-delay="2" style="text-align:center">
+        <span class="avatar" style="width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#4a2c00;font-size:1.6rem;margin:0 auto 16px;background:var(--amber);font-family:var(--font-display)">TN</span>
+        <h3 style="font-size:1.2rem;margin-bottom:2px">Tom Nguyen</h3>
+        <p style="color:var(--coral-600);font-weight:700;font-size:.9rem;margin-bottom:10px">Settlements Lead</p>
+        <p style="font-size:.95rem">Keeps every PEXA settlement running like clockwork so your big day goes off without a hitch.</p>
+      </div>
+    </div>
+    <p class="center" style="margin-top:24px;font-size:.85rem;color:var(--muted)">Team profiles shown are placeholders — swap in your real people and photos.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band section-sm">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Let's do this the well way</h2>
+      <p>Join thousands of Victorians who've settled with confidence. Start your matter online in minutes.</p>
+      <div class="cta-actions">
+        <a href="/get-started" class="btn btn--coral btn--lg">Get started</a>
+        <a href="/how-it-works" class="btn btn--ghost btn--lg">See how it works</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</Base>

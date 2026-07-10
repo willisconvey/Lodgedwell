@@ -1,0 +1,32 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const {
+  title = 'Lodgedwell — Online conveyancing, Victoria',
+  description = 'Modern online conveyancing for Victorian property. Fixed fees, real-time tracking and a friendly team — buy or sell with confidence.',
+  active = '',
+  tally = false,
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <Header active={active} />
+  <slot />
+  <Footer />
+  {tally && <script is:inline src="https://tally.so/widgets/embed.js" defer></script>}
+  <script is:inline src="/assets/js/main.js" defer></script>
+</body>
+</html>

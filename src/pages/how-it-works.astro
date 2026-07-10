@@ -1,0 +1,161 @@
+---
+import Base from '../layouts/Base.astro';
+const title = "How it works \u2014 Lodgedwell online conveyancing";
+const description = "From online onboarding to settlement day. See exactly how Lodgedwell handles your Victorian property conveyancing, step by step.";
+---
+<Base title={title} description={description} active="how-it-works" tally={false}>
+<main>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="blob blob-1"></span>
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="/">Home</a> / How it works</p>
+    <div class="section-head reveal" data-delay="1">
+      <span class="eyebrow">The process</span>
+      <h1>From first click to front-door keys</h1>
+      <p class="lead">Conveyancing has a reputation for being slow and confusing. We've rebuilt it around you — clear steps, honest updates and technology that does the heavy lifting.</p>
+    </div>
+    <div class="hero-actions reveal" data-delay="2" style="margin-top:28px">
+      <a href="/get-started" class="btn btn--lg">Start your matter</a>
+      <a href="/pricing" class="btn btn--ghost btn--lg">See pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE STEPS -->
+<section class="section" style="padding-top:20px">
+  <div class="container">
+    <div class="grid" style="gap:22px">
+      <!-- Step 1 -->
+      <div class="split reveal" style="align-items:flex-start">
+        <div class="split-copy">
+          <span class="step-num" style="position:static;display:inline-grid;margin-bottom:14px">1</span>
+          <h2>Onboard online</h2>
+          <p class="lead">Tell us about your property in a short guided form. Choose <b>buying</b> or <b>selling</b>, answer a few plain-English questions, and upload your contract if you have one. About 10 minutes, on any device.</p>
+          <ul class="check-list" style="margin-top:20px">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>No printing, scanning or posting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Save and resume any time</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Secure, encrypted submission</li>
+          </ul>
+        </div>
+        <div class="split-media">
+          <div class="mock">
+            <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">lodgedwell.com.au/start</span></div>
+            <div class="mock-body">
+              <div class="mock-row"><span class="mock-title">Buying questionnaire</span><span class="mock-badge">Step 2 of 6</span></div>
+              <div class="mock-progress"><i style="width:33%"></i></div>
+              <div class="info-row" style="padding:14px 0;border:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><h4 style="margin:0">Property address</h4><p style="margin:0">14 Rosella St, Preston VIC 3072</p></div></div>
+              <div class="info-row" style="padding:14px 0;border:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><div><h4 style="margin:0">Contract date</h4><p style="margin:0">Auction — 5 July 2026</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="split reverse reveal" style="align-items:flex-start;margin-top:40px">
+        <div class="split-copy">
+          <span class="step-num" style="position:static;display:inline-grid;margin-bottom:14px;background:var(--green-500)">2</span>
+          <h2>We review &amp; set up your matter</h2>
+          <p class="lead">A licensed Victorian conveyancer reviews your contract and Section 32, calculates your stamp duty, and checks any concessions you're entitled to. We'll flag anything important in language that makes sense.</p>
+          <ul class="check-list" style="margin-top:20px">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Contract &amp; vendor statement checked</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Stamp duty &amp; concession estimate</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A named conveyancer, introduced by email</li>
+          </ul>
+        </div>
+        <div class="split-media">
+          <div class="stat-panel">
+            <h3 style="color:#fff;font-size:1.3rem;margin-bottom:20px">Your review summary</h3>
+            <div class="stat-grid">
+              <div class="stat"><b class="accent"><span data-count="24" data-suffix="h">0</span></b><span>Typical turnaround</span></div>
+              <div class="stat"><b><span data-count="38" data-prefix="$" data-suffix="k">0</span></b><span>Est. stamp duty</span></div>
+              <div class="stat"><b class="accent">FHB</b><span>Concession checked</span></div>
+              <div class="stat"><b>0</b><span>Nasty surprises</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="split reveal" style="align-items:flex-start;margin-top:40px">
+        <div class="split-copy">
+          <span class="step-num" style="position:static;display:inline-grid;margin-bottom:14px;background:var(--coral);color:#4a1710">3</span>
+          <h2>Track every milestone</h2>
+          <p class="lead">Your dashboard shows exactly where things stand, what's next, and what (if anything) we need from you. Sign documents electronically and get proactive nudges — no chasing required.</p>
+          <ul class="check-list" style="margin-top:20px">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Live status from review to settlement</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Sign from your phone in seconds</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Direct line to your conveyancer</li>
+          </ul>
+        </div>
+        <div class="split-media">
+          <div class="mock">
+            <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">app.lodgedwell.com.au</span></div>
+            <div class="mock-body">
+              <div class="mock-row"><span class="mock-title">Settlement countdown</span><span class="mock-badge">On track</span></div>
+              <div class="tracker">
+                <div class="tracker-step done"><span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><span class="tracker-label">Contract reviewed</span></span></div>
+                <div class="tracker-step done"><span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><span class="tracker-label">Documents e-signed</span></span></div>
+                <div class="tracker-step current"><span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><span class="tracker-label">Verifying funds &amp; adjustments</span><span class="tracker-sub">We'll notify you when done</span></span></div>
+                <div class="tracker-step pending"><span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg></span><span><span class="tracker-label">Settlement day</span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="split reverse reveal" style="align-items:flex-start;margin-top:40px">
+        <div class="split-copy">
+          <span class="step-num" style="position:static;display:inline-grid;margin-bottom:14px;background:var(--amber);color:#4a2c00">4</span>
+          <h2>Settle electronically with PEXA</h2>
+          <p class="lead">On settlement day we exchange funds and title digitally through PEXA — Australia's secure electronic conveyancing network. No bank cheques, no couriers. As soon as it's done, you'll know.</p>
+          <ul class="check-list" style="margin-top:20px">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Faster, safer digital settlement</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Instant confirmation to your phone</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Title lodged with Land Use Victoria</li>
+          </ul>
+        </div>
+        <div class="split-media">
+          <div class="card" style="text-align:center;padding:44px 30px">
+            <span class="ic-badge" style="margin-inline:auto;width:64px;height:64px;background:var(--green-100)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+            <h3 style="margin-bottom:.2em">Settled 🎉</h3>
+            <p style="margin:0 auto;max-width:34ch">Congratulations — the property is officially yours. Here's to your next chapter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU NEED -->
+<section class="section" style="background:var(--cream-200);border-block:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:44px">
+      <span class="eyebrow">Before you start</span>
+      <h2>What to have handy</h2>
+      <p class="lead">Don't have everything? No problem — you can start now and add the rest later.</p>
+    </div>
+    <div class="grid cols-3" style="max-width:900px;margin-inline:auto">
+      <div class="info-row reveal" style="border:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><div><h4>The contract</h4><p>The contract of sale &amp; Section 32, if you have them.</p></div></div>
+      <div class="info-row reveal" data-delay="1" style="border:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><div><h4>Key dates</h4><p>Contract date and preferred settlement date.</p></div></div>
+      <div class="info-row reveal" data-delay="2" style="border:0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Your ID</h4><p>Standard identity details for verification.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band section-sm">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Let's get your matter moving</h2>
+      <p>Start online now — it only takes a few minutes, and a licensed conveyancer will be in touch within one business day.</p>
+      <div class="cta-actions">
+        <a href="/get-started#buy" class="btn btn--coral btn--lg">I'm buying</a>
+        <a href="/get-started#sell" class="btn btn--ghost btn--lg">I'm selling</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</Base>
