@@ -7,6 +7,7 @@ const {
   description = 'Modern online conveyancing for Victorian property. Fixed fees, real-time tracking and a friendly team — buy or sell with confidence.',
   active = '',
   tally = false,
+  noindex = false,
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -16,6 +17,7 @@ const {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex" />}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />

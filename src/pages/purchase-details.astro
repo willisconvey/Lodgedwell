@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+const title = "Purchase details — Purchase form | Lodgedwell";
+const description = "Step 3 of 3 — complete the details of your property purchase to finish your Lodgedwell purchase form.";
+---
+<Base title={title} description={description} active="" tally={true} noindex={true}>
+<main>
+<section class="page-hero center">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Purchase form &middot; Step 3 of 3</span>
+      <h1>Your purchase details</h1>
+      <p class="lead">You're nearly there. Tell us about the property you're purchasing and how you'd like to proceed &mdash; a licensed conveyancer will review everything you submit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:8px">
+  <div class="container" style="max-width:840px">
+    <div class="reveal">
+      <div class="form-embed-card">
+        <iframe
+          data-tally-src="https://tally.so/embed/81gAgr?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+          loading="lazy"
+          title="Lodgedwell purchase form — purchase details"
+          height="760"></iframe>
+      </div>
+      <p style="text-align:center;margin-top:18px;font-size:.92rem;color:var(--muted)">
+        Need a hand with any question? Call <a href="tel:1300000000" style="color:var(--green-700);font-weight:700">1300 000 000</a> or email <a href="mailto:hello@lodgedwell.com.au" style="color:var(--green-700);font-weight:700">hello@lodgedwell.com.au</a>.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+</Base>
