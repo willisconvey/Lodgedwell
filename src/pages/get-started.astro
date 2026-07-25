@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import FlowFrame from '../components/FlowFrame.astro';
 const title = "Get started \u2014 Onboard online | Lodgedwell";
 const description = "Start your Victorian conveyancing online. Complete our short buying or selling form and a licensed conveyancer will be in touch within one business day.";
 ---
@@ -32,13 +33,7 @@ const description = "Start your Victorian conveyancing online. Complete our shor
         <span class="mock-badge" style="background:var(--green-100);color:var(--green-700)">Buying questionnaire</span>
         <span style="font-size:.9rem;color:var(--muted)">Takes ~10 minutes · Save and resume any time</span>
       </div>
-      <div class="form-embed-card">
-        <iframe
-          data-tally-src="https://tally.so/embed/ODeNGR?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
-          loading="lazy"
-          title="Lodgedwell buying questionnaire"
-          height="760"></iframe>
-      </div>
+      <FlowFrame step="/purchase-flow/step-1" title="Lodgedwell buying questionnaire" />
       <p style="text-align:center;margin-top:18px;font-size:.92rem;color:var(--muted)">
         Prefer to talk first? Call <a href="tel:1300000000" style="color:var(--green-700);font-weight:700">1300 000 000</a> or email <a href="mailto:hello@lodgedwell.com.au" style="color:var(--green-700);font-weight:700">hello@lodgedwell.com.au</a>.
       </p>

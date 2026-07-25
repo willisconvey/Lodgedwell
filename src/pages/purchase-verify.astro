@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import FlowFrame from '../components/FlowFrame.astro';
 const title = "Verify your mobile — Purchase form | Lodgedwell";
 const description = "Step 2 of 3 — enter the 6-digit code we sent to your mobile to continue your Lodgedwell purchase form.";
 ---
@@ -20,13 +21,7 @@ const description = "Step 2 of 3 — enter the 6-digit code we sent to your mobi
 <section class="section" style="padding-top:8px">
   <div class="container" style="max-width:840px">
     <div class="reveal">
-      <div class="form-embed-card">
-        <iframe
-          data-tally-src="https://tally.so/embed/0QgZZN?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
-          loading="lazy"
-          title="Lodgedwell purchase form — verify your mobile"
-          height="500"></iframe>
-      </div>
+      <FlowFrame step="/purchase-flow/step-2" title="Lodgedwell purchase form — verify your mobile" />
       <p style="text-align:center;margin-top:18px;font-size:.92rem;color:var(--muted)">
         Didn't receive a code? Call <a href="tel:1300000000" style="color:var(--green-700);font-weight:700">1300 000 000</a> or email <a href="mailto:hello@lodgedwell.com.au" style="color:var(--green-700);font-weight:700">hello@lodgedwell.com.au</a> and we'll help you continue.
       </p>
