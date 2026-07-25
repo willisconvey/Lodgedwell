@@ -81,4 +81,6 @@ tab.
 The buying tab first verifies the visitor's mobile with an SMS code
 (Twilio Verify, called from `netlify/functions/`). Set `TWILIO_ACCOUNT_SID`,
 `TWILIO_AUTH_TOKEN` and `TWILIO_VERIFY_SERVICE_SID` as Netlify environment
-variables — see `HANDOFF.md` for details.
+variables (`TWILIO_VERIFY_SERVICE_SID` is a Verify Service SID, `VA...` —
+create one in Twilio Console → Verify → Services if none exists). Until they
+are set, the gate shows "Verification is not configured".
