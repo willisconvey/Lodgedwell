@@ -33,7 +33,8 @@ const description = "Start your Victorian conveyancing online. Complete our shor
         <span style="font-size:.9rem;color:var(--muted)">Takes ~10 minutes · Save and resume any time</span>
       </div>
       <!-- Step 1: verify the mobile number (Twilio Verify via Netlify functions),
-           then reveal the Jotform with the verified number passed through. -->
+           then reveal the Tally purchase form with the verified number passed
+           through to its hidden `phone` field. -->
       <div class="form-embed-card" id="lw-verify-gate">
         <div style="padding:34px 24px;max-width:440px;margin-inline:auto;text-align:center">
           <h3 style="margin:0 0 8px">First, verify your mobile</h3>
@@ -57,14 +58,12 @@ const description = "Start your Victorian conveyancing online. Complete our shor
       </div>
       <div class="form-embed-card" id="lw-form-card" hidden>
         <iframe
-          id="JotFormIFrame-262051079065050"
+          id="lw-purchase-form"
           title="Lodgedwell purchase form"
-          allow="geolocation; microphone; camera; fullscreen; payment"
-          data-jotform-src="https://form.jotform.com/262051079065050"
-          style="min-width:100%;max-width:100%;height:760px;border:none"
-          scrolling="no"></iframe>
+          data-tally-base="https://tally.so/embed/81gAgr?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          height="760"
+          style="width:100%;border:0;display:block"></iframe>
       </div>
-      <script is:inline src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
       <script is:inline>
         (function () {
           var $ = function (id) { return document.getElementById(id); };
@@ -73,15 +72,16 @@ const description = "Start your Victorian conveyancing online. Complete our shor
           try { verified = sessionStorage.getItem('lw-verified-phone') || ''; } catch (e) {}
 
           function showForm(phone) {
-            var frame = $('JotFormIFrame-262051079065050');
-            var src = frame.getAttribute('data-jotform-src');
-            if (phone) src += '?phone7[full]=' + encodeURIComponent(phone);
-            frame.src = src;
+            var frame = $('lw-purchase-form');
+            var src = frame.getAttribute('data-tally-base');
+            // The `phone` query param lands in the Tally form's hidden
+            // `phone` field, so the verified number rides along with the
+            // submission without being asked for again.
+            if (phone) src += '&phone=' + encodeURIComponent(phone);
+            frame.setAttribute('data-tally-src', src);
             gate.hidden = true;
             card.hidden = false;
-            if (window.jotformEmbedHandler) {
-              window.jotformEmbedHandler("iframe[id='JotFormIFrame-262051079065050']", 'https://form.jotform.com/');
-            }
+            if (window.Tally) { window.Tally.loadEmbeds(); } else { frame.src = src; }
           }
 
           if (verified) { showForm(verified); return; }
