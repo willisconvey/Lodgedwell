@@ -1,4 +1,15 @@
-# Handoff — Tally → Jotform forms migration
+# Handoff — Lodgedwell purchase form migration
+
+**UPDATE (2026-07-25, later):** direction changed — the buying flow now uses a
+single **merged Tally form** (`81gAgr`, the old Step 3 form with the Step 1
+personal-details questions added as its first page and Tally email
+verification on) behind the on-site Twilio SMS gate. The Jotform
+(`262051079065050`) described below was fully built and remains as a fallback,
+but the site embeds Tally. Pending at time of writing: the Tally form edits
+(add page-1 questions, email verification, rename to "Purchase Form -
+Lodgedwell", update the page-7 first_name heading) were blocked by connector
+approval issues — if the form still shows "(Step 3 - Purchase Details)" as its
+first page, those edits still need doing before merging the site PR.
 
 _Working notes for the `claude/lodgedwell-forms-jotform-m8oimd` branch. Delete
 this file before merging to `main`._

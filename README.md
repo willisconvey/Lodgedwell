@@ -67,14 +67,16 @@ site updates.
 
 ## Onboarding forms
 
-`get-started.astro` embeds the onboarding forms. **Buying** uses the Jotform
-**Purchase Form - Lodgedwell** (`262051079065050`) — a single multi-page form
-with Jotform's built-in email verification (this replaced the old three-step
-Tally flow with separate email/SMS verification forms; the old
-`/purchase-flow/*`, `/purchase-verify` and `/purchase-details` URLs now
-redirect to `/get-started`). **Selling** still embeds the Tally property sales
-form (`9q5aBQ`); the `<Base tally={true}>` prop loads Tally's embed script.
-Deep links `/get-started#buy` and `/get-started#sell` open the right tab.
+`get-started.astro` embeds the onboarding forms. **Buying** uses the merged
+Tally purchase form (`81gAgr`) — a single multi-page form (personal details +
+purchase details) with Tally's built-in email verification, revealed after the
+on-site SMS gate verifies the visitor's mobile (the verified number is passed
+into the form's hidden `phone` field). This replaced the old three-step Tally
+flow; the old `/purchase-flow/*`, `/purchase-verify` and `/purchase-details`
+URLs now redirect to `/get-started`. **Selling** embeds the Tally property
+sales form (`9q5aBQ`). The `<Base tally={true}>` prop loads Tally's embed
+script. Deep links `/get-started#buy` and `/get-started#sell` open the right
+tab.
 
 The buying tab first verifies the visitor's mobile with an SMS code
 (Twilio Verify, called from `netlify/functions/`). Set `TWILIO_ACCOUNT_SID`,
