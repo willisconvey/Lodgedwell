@@ -2,7 +2,11 @@
 // Chrome-less inner page for one step of the purchase flow. Rendered inside
 // the outer FlowFrame iframe, so Tally's redirect-on-completion only
 // navigates this page and the visible site page never changes.
-const { formId, title } = Astro.props;
+// `fallback` is the branded page wrapping this step: if this page is ever
+// opened as the top-level window (direct link, tally.so-hosted form, stale
+// cache of a pre-FlowFrame page), it forwards there instead of showing a
+// bare embed.
+const { formId, title, fallback } = Astro.props;
 ---
 <html lang="en-AU">
 <head>
@@ -10,6 +14,11 @@ const { formId, title } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <meta name="robots" content="noindex" />
+  <script is:inline define:vars={{ fallback }}>
+    if (window === window.top) {
+      window.location.replace(fallback + window.location.search);
+    }
+  </script>
   <style>
     html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
     iframe { width: 100%; border: 0; display: block; }
