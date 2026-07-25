@@ -75,3 +75,8 @@ Tally flow with separate email/SMS verification forms; the old
 redirect to `/get-started`). **Selling** still embeds the Tally property sales
 form (`9q5aBQ`); the `<Base tally={true}>` prop loads Tally's embed script.
 Deep links `/get-started#buy` and `/get-started#sell` open the right tab.
+
+The buying tab first verifies the visitor's mobile with an SMS code
+(Twilio Verify, called from `netlify/functions/`). Set `TWILIO_ACCOUNT_SID`,
+`TWILIO_AUTH_TOKEN` and `TWILIO_VERIFY_SERVICE_SID` as Netlify environment
+variables — see `HANDOFF.md` for details.

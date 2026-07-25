@@ -47,11 +47,25 @@ this file before merging to `main`._
   spec was used to build the Jotform)
 - `9q5aBQ` Property Sales Form — still live on the selling tab
 
-## Open items
+## SMS verification (added 2026-07-25)
 
-1. **SMS verification (optional)**: Jotform has no native mid-form SMS OTP.
-   If wanted, wire Twilio Verify directly (needs Twilio credentials) or via
-   Make. Otherwise the AU phone validation stands.
+The buying tab on `/get-started` now has an on-site Twilio Verify gate:
+enter mobile → SMS code → code checked → Jotform revealed with the verified
+number prefilled (`?phone7[full]=...`). Implementation:
+
+- `netlify/functions/send-code.mjs` / `check-code.mjs` (+ `lib/twilio.mjs`)
+  call Twilio Verify's REST API directly — no npm dependency.
+- **Required Netlify environment variables** (Site settings → Environment
+  variables) — the gate returns "Verification is not configured" until set:
+  - `TWILIO_ACCOUNT_SID`
+  - `TWILIO_AUTH_TOKEN`
+  - `TWILIO_VERIFY_SERVICE_SID` (a Verify Service SID, `VA...` — create one
+    in Twilio Console → Verify → Services if none exists)
+- Verified state is kept in `sessionStorage` (`lw-verified-phone`), so the
+  gate is skipped for the rest of the browser session. The gate is a
+  data-quality measure, not a security boundary.
+
+## Open items
 2. **Property Sales Form** migration to Jotform (selling tab) — not started.
 3. **Open/merge the PR** for this branch to deploy the site changes.
 4. Recommended: a manual click-through of the live Jotform (this environment
