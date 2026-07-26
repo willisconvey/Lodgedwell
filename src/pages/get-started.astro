@@ -56,7 +56,9 @@ const description = "Start your Victorian conveyancing online. Complete our shor
           <p style="margin:16px 0 0;font-size:.85rem;color:var(--muted)">Not receiving the code? Call <a href="tel:1300000000" style="color:var(--green-700);font-weight:700">1300 000 000</a> and we'll help you continue.</p>
         </div>
       </div>
-      <div class="form-embed-card" id="lw-form-card" hidden>
+      <!-- No card chrome here: the form sits directly on the page canvas so the
+           embed reads as native page content (the iframe is transparent). -->
+      <div id="lw-form-card" hidden>
         <div style="max-width:680px;margin-inline:auto;padding-inline:24px">
           <iframe
             id="lw-purchase-form"
