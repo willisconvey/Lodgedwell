@@ -544,9 +544,9 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
   overflow: hidden; box-shadow: var(--shadow-md);
 }
 .form-embed-card iframe { width: 100%; border: 0; display: block; min-height: 280px; background: var(--white); transition: height .25s ease; }
-.tabs { display: inline-flex; padding: 4px; gap: 4px; background: var(--paper-sunk); border-radius: var(--radius-pill); }
+.tabs { display: inline-flex; padding: 4px; gap: 4px; background: var(--paper-sunk); border-radius: 14px; }
 .tab {
-  border: 0; background: transparent; padding: 10px 24px; border-radius: var(--radius-pill);
+  border: 0; background: transparent; padding: 10px 24px; border-radius: var(--radius-md);
   font-family: var(--font-body); font-weight: var(--fw-semibold); color: var(--ink-500); font-size: .9375rem;
   transition: background var(--dur-base) var(--ease-standard), color var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard);
 }
