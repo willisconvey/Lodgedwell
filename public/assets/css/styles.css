@@ -150,11 +150,12 @@ p  { margin: 0 0 1rem; color: var(--ink-700); text-wrap: pretty; }
   color: var(--brand); margin-bottom: .9rem;
 }
 .section-head { max-width: 640px; }
-.center .section-head { margin-inline: auto; }
+.center .section-head, .section-head.center { margin-inline: auto; }
 .grid { display: grid; gap: 24px; }
 .cols-2 { grid-template-columns: repeat(2, 1fr); }
 .cols-3 { grid-template-columns: repeat(3, 1fr); }
 .cols-4 { grid-template-columns: repeat(4, 1fr); }
+.cols-5 { grid-template-columns: repeat(5, 1fr); }
 
 /* ------------------------------------------------------------------ */
 /* Buttons — DS: radius-md, semibold, ochre accent / green primary    */
@@ -651,7 +652,7 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { width: 100%; max-width: 500px; margin: 12px auto 0; }
-  .split, .cols-4 { grid-template-columns: 1fr 1fr; }
+  .split, .cols-4, .cols-5 { grid-template-columns: 1fr 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 @media (max-width: 780px) {
@@ -663,7 +664,7 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
     box-shadow: var(--shadow-md); z-index: 99;
   }
   .site-header.menu-visible .nav-links a { padding: 14px 4px; font-size: 1.0625rem; }
-  .cols-2, .cols-3, .cols-4, .price-grid, .path-grid, .value-grid, .stat-grid, .split { grid-template-columns: 1fr; }
+  .cols-2, .cols-3, .cols-4, .cols-5, .price-grid, .path-grid, .value-grid, .stat-grid, .split { grid-template-columns: 1fr; }
   .split.reverse .split-media { order: 0; }
   .price-card.featured { order: -1; }
   .footer-top { grid-template-columns: 1fr 1fr; }

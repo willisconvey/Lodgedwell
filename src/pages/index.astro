@@ -16,7 +16,7 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
         <span class="tag">100% ONLINE</span>
       </span>
       <h1 class="reveal" data-delay="1">Conveyancing, <span class="underline-mark">done well.</span></h1>
-      <p class="lead reveal" data-delay="2">Buying or selling in Victoria? Settle your property the modern way — <span class="serif-accent">fixed fees</span>, real-time tracking, and real humans who pick up the phone.</p>
+      <p class="lead reveal" data-delay="2">Whether buying or selling, anywhere in Victoria, settle your property the modern way — <span class="serif-accent">transparent pricing</span>, real-time tracking and fast answers.</p>
       <div class="hero-actions reveal" data-delay="3">
         <a href="/get-started" class="btn btn--lg">Start online in minutes
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -24,7 +24,6 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
         <a href="/pricing" class="btn btn--ghost btn--lg">See fixed pricing</a>
       </div>
       <div class="hero-reassure reveal" data-delay="3">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> No lock-in contracts</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Licensed conveyancers</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> PEXA e-settlement</span>
       </div>
@@ -52,7 +51,7 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
   <div class="container trust-inner">
     <span class="trust-label">Built for Victorian property</span>
     <div class="trust-items">
-      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg> 4.9★ average rating</span>
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg> 5-star service</span>
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> PEXA certified e-settlement</span>
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Fully insured &amp; licensed</span>
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Melbourne &amp; regional VIC</span>
@@ -72,7 +71,7 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
       <div class="path-card buy reveal">
         <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
         <h3>I'm buying</h3>
-        <p>Bought at auction or by private sale? Get your contract reviewed and glide to settlement. Complete the buying questionnaire and we'll be in touch within one business day.</p>
+        <p>Bought at auction or by private sale? Complete the buying questionnaire and we'll be in touch within one business day.</p>
         <a href="/get-started#buy" class="btn">Start buying <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="path-card sell reveal" data-delay="1">
@@ -88,27 +87,59 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
 <!-- ================= HOW IT WORKS ================= -->
 <section class="section" style="background:var(--cream-200);border-block:1px solid var(--line)">
   <div class="container">
-    <div class="section-head center reveal" style="margin-bottom:60px">
+    <div class="section-head center reveal" style="margin-bottom:36px">
       <span class="eyebrow">How it works</span>
-      <h2>Settle in four simple steps</h2>
+      <h2>Get it done. In easy steps.</h2>
       <p class="lead">No jargon, no waiting rooms, no mystery invoices. Just a clear path from offer to keys.</p>
     </div>
-    <div class="grid cols-4">
-      <div class="card step-card reveal"><span class="step-num">1</span>
-        <h3>Onboard online</h3>
-        <p>Complete a short guided form on any device. It takes about 10 minutes and there's no paperwork to print.</p>
+    <div class="center reveal" style="margin-bottom:44px">
+      <div class="tabs" role="tablist" aria-label="Choose your matter type">
+        <button class="tab active" id="hiw-tab-buy" role="tab" aria-selected="true" aria-controls="hiw-panel-buy">Purchase</button>
+        <button class="tab" id="hiw-tab-sell" role="tab" aria-selected="false" aria-controls="hiw-panel-sell">Sale</button>
       </div>
-      <div class="card step-card reveal" data-delay="1"><span class="step-num">2</span>
-        <h3>We review everything</h3>
-        <p>A licensed conveyancer checks your contract and Section 32, and flags anything you should know — fast.</p>
+    </div>
+    <div id="hiw-panel-buy" role="tabpanel" aria-labelledby="hiw-tab-buy">
+      <div class="grid cols-4">
+        <div class="card step-card reveal"><span class="step-num">1</span>
+          <h3>Onboard online</h3>
+          <p>Complete a short guided form on any device. It takes about 10 minutes and there's no paperwork to print.</p>
+        </div>
+        <div class="card step-card reveal" data-delay="1"><span class="step-num">2</span>
+          <h3>We get you sorted</h3>
+          <p>A licensed conveyancer checks and reviews the file. We let you know what you need to do and when.</p>
+        </div>
+        <div class="card step-card reveal" data-delay="2"><span class="step-num">3</span>
+          <h3>Track in real time</h3>
+          <p>Follow every milestone from your dashboard while we handle duty, concessions and your bank.</p>
+        </div>
+        <div class="card step-card reveal" data-delay="3"><span class="step-num">4</span>
+          <h3>Settle with PEXA</h3>
+          <p>We handle electronic settlement end-to-end so funds and title change hands securely — then you get the keys.</p>
+        </div>
       </div>
-      <div class="card step-card reveal" data-delay="2"><span class="step-num">3</span>
-        <h3>Track in real time</h3>
-        <p>Follow every milestone from your dashboard and get proactive updates. No more chasing for a status.</p>
-      </div>
-      <div class="card step-card reveal" data-delay="3"><span class="step-num">4</span>
-        <h3>Settle with PEXA</h3>
-        <p>We handle electronic settlement end-to-end so funds and title change hands securely — then you get the keys.</p>
+    </div>
+    <div id="hiw-panel-sell" role="tabpanel" aria-labelledby="hiw-tab-sell" hidden>
+      <div class="grid cols-5">
+        <div class="card step-card"><span class="step-num">1</span>
+          <h3>Onboard online</h3>
+          <p>Tell us about your property in a short guided form — about 10 minutes on any device, nothing to print.</p>
+        </div>
+        <div class="card step-card"><span class="step-num">2</span>
+          <h3>We check everything over</h3>
+          <p>We review your information and if there is anything missing we will let you know.</p>
+        </div>
+        <div class="card step-card"><span class="step-num">3</span>
+          <h3>We prepare your documents</h3>
+          <p>We prepare your Section 32 vendor statement and contract of sale so you're ready to hit the market.</p>
+        </div>
+        <div class="card step-card"><span class="step-num">4</span>
+          <h3>Track in real time</h3>
+          <p>Follow every milestone from your dashboard while we liaise with the buyer's side and your bank.</p>
+        </div>
+        <div class="card step-card"><span class="step-num">5</span>
+          <h3>Settle with PEXA</h3>
+          <p>We manage electronic settlement and your mortgage discharge, and the proceeds land in your account.</p>
+        </div>
       </div>
     </div>
     <div class="center reveal" style="margin-top:44px">
@@ -125,10 +156,10 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
       <h2>Old-school care, meet new-school speed</h2>
       <p class="lead">Traditional conveyancing shouldn't mean phone tag and vague fees. We pair experienced Victorian conveyancers with technology that keeps you in the loop the whole way.</p>
       <ul class="check-list" style="margin-top:26px">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>One transparent fixed fee.</b> Quoted up front, with disbursements listed line by line.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>A real person on your matter.</b> Named conveyancer, direct line, replies that actually land.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Secure e-signing &amp; e-settlement.</b> Sign from the couch; settle through PEXA.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Built for Victoria.</b> Section 32, stamp duty, first-home concessions — we live and breathe VIC.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>One transparent fixed fee</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>A real person on your matter</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Secure e-signing &amp; e-settlement</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Built for Victoria</b></span></li>
       </ul>
       <div style="margin-top:30px"><a href="/services" class="btn">Explore our services</a></div>
     </div>
@@ -137,7 +168,7 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
         <h3 style="color:#fff;font-size:1.4rem;margin-bottom:24px">The Lodgedwell difference</h3>
         <div class="stat-grid">
           <div class="stat"><b><span data-count="2400" data-prefix="" data-suffix="+">0</span></b><span>Victorian settlements guided</span></div>
-          <div class="stat"><b class="accent"><span data-count="4.9" data-suffix="★">0</span></b><span>Average client rating</span></div>
+          <div class="stat"><b class="accent"><span data-count="5" data-suffix="★">0</span></b><span>5-star service</span></div>
           <div class="stat"><b><span data-count="24" data-suffix="h">0</span></b><span>Typical contract turnaround</span></div>
           <div class="stat"><b class="accent"><span data-count="100" data-suffix="%">0</span></b><span>Online, on your schedule</span></div>
         </div>
@@ -154,20 +185,20 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
       <h2>Everything the transfer needs</h2>
     </div>
     <div class="grid cols-3">
-      <div class="card reveal">
-        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
-        <h3>Contract &amp; Section 32 review</h3>
-        <p>We read the fine print so you don't have to, and explain what matters in plain English before you're bound.</p>
-      </div>
-      <div class="card card--coral reveal" data-delay="1">
+      <div class="card card--coral reveal">
         <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
         <h3>Stamp duty &amp; concessions</h3>
         <p>We calculate your land transfer duty and check first-home, pensioner and off-the-plan concessions.</p>
       </div>
-      <div class="card card--amber reveal" data-delay="2">
+      <div class="card card--amber reveal" data-delay="1">
         <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6 4 4 8-8"/><path d="M14 7h6v6"/></svg></span>
         <h3>PEXA electronic settlement</h3>
         <p>Faster, safer settlements with funds and title exchanged digitally — no bank cheques, no couriers.</p>
+      </div>
+      <div class="card reveal" data-delay="2">
+        <span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+        <h3>Notices &amp; authorities</h3>
+        <p>We notify the relevant authorities — council, water and the State Revenue Office — so rates and records are updated in the right name.</p>
       </div>
     </div>
     <div class="center reveal" style="margin-top:40px">
@@ -182,14 +213,14 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
     <div class="section-head center reveal" style="margin-bottom:52px">
       <span class="eyebrow">Fixed-fee pricing</span>
       <h2>Know the price before you begin</h2>
-      <p class="lead">One clear fee per matter. Government charges and search fees (disbursements) are listed separately at cost — nothing hidden.</p>
+      <p class="lead">One clear fixed fee per matter, disbursements included — nothing hidden.</p>
     </div>
     <div class="price-grid">
       <div class="price-card reveal">
         <span class="price-name">Sale</span>
         <p class="price-desc">Selling a Victorian home or investment property.</p>
-        <div class="price-amount"><span class="cur">$</span><span class="num">880</span><span class="per">fixed*</span></div>
-        <p class="price-note">+ disbursements at cost</p>
+        <div class="price-amount"><span class="cur">$</span><span class="num">1,000</span><span class="per">+ GST</span></div>
+        <p class="price-note">Disbursements included*</p>
         <ul class="check-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Section 32 vendor statement</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Contract of sale prepared</li>
@@ -198,13 +229,12 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
         <a href="/get-started#sell" class="btn btn--ghost btn--block">Start selling</a>
       </div>
       <div class="price-card featured reveal" data-delay="1">
-        <span class="price-badge">Most popular</span>
         <span class="price-name">Purchase</span>
         <p class="price-desc">Buying your next home or investment in VIC.</p>
-        <div class="price-amount"><span class="cur">$</span><span class="num">990</span><span class="per">fixed*</span></div>
-        <p class="price-note">+ disbursements at cost</p>
+        <div class="price-amount"><span class="cur">$</span><span class="num">1,000</span><span class="per">+ GST</span></div>
+        <p class="price-note">Disbursements included*</p>
         <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Contract &amp; Section 32 review</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Expert examination of your matter</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Stamp duty &amp; concessions</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>PEXA settlement &amp; title transfer</li>
         </ul>
@@ -213,8 +243,8 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
       <div class="price-card reveal" data-delay="2">
         <span class="price-name">Transfer</span>
         <p class="price-desc">Adding, removing or gifting a name on title.</p>
-        <div class="price-amount"><span class="cur">$</span><span class="num">660</span><span class="per">fixed*</span></div>
-        <p class="price-note">+ disbursements at cost</p>
+        <div class="price-amount"><span class="cur">$</span><span class="num">1,000</span><span class="per">+ GST</span></div>
+        <p class="price-note">Disbursements included*</p>
         <ul class="check-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Related-party transfers</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Duty &amp; exemption checks</li>
@@ -223,40 +253,7 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
         <a href="/get-started" class="btn btn--ghost btn--block">Enquire now</a>
       </div>
     </div>
-    <p class="center" style="margin-top:24px;font-size:.85rem;color:var(--muted)">*Indicative fixed fees shown for illustration. You'll receive a firm, itemised quote before any work begins.</p>
-  </div>
-</section>
-
-<!-- ================= TESTIMONIALS ================= -->
-<section class="section" style="background:var(--cream-200);border-block:1px solid var(--line)">
-  <div class="container">
-    <div class="section-head center reveal" style="margin-bottom:48px">
-      <span class="eyebrow">Loved by Victorians</span>
-      <h2>First-home buyers to seasoned investors</h2>
-    </div>
-    <div class="grid cols-3">
-      <div class="quote-card reveal">
-        <div class="stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
-        </div>
-        <blockquote>"First home, no idea what I was doing. Lodgedwell explained every step and the tracker meant I always knew where things were at. Settled early!"</blockquote>
-        <div class="quote-author"><span class="avatar" style="background:var(--green-500)">MA</span><span><b>Maya A.</b><span>First-home buyer · Preston</span></span></div>
-      </div>
-      <div class="quote-card reveal" data-delay="1">
-        <div class="stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
-        </div>
-        <blockquote>"Sold our place in Geelong and bought in the same month. Fixed fee both ways, no nasty surprises, and someone actually answered when I called."</blockquote>
-        <div class="quote-author"><span class="avatar" style="background:var(--coral)">DT</span><span><b>Daniel &amp; Trish</b><span>Upsizers · Geelong</span></span></div>
-      </div>
-      <div class="quote-card reveal" data-delay="2">
-        <div class="stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.5 1-6.3L3 8.9 9 8z"/></svg>
-        </div>
-        <blockquote>"As an investor I do a few of these a year. Doing it all online, signing on my phone, tracking settlement — this is how it should work in 2026."</blockquote>
-        <div class="quote-author"><span class="avatar" style="background:var(--amber);color:#4a2c00">RK</span><span><b>Raj K.</b><span>Property investor · Melbourne</span></span></div>
-      </div>
-    </div>
+    <p class="center" style="margin-top:24px;font-size:.85rem;color:var(--muted)">*Owners Corporation certificates are additional. Excludes PEXA fees and government charges, including stamp duty.</p>
   </div>
 </section>
 
@@ -278,7 +275,7 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" aria-expanded="false">How much does it cost?<span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner"><p>We charge one fixed professional fee per matter, quoted up front. On top of that are disbursements — government and search fees we pay on your behalf — which we list separately at cost. You'll always see a firm, itemised quote before we start.</p></div></div>
+        <div class="faq-a"><div class="faq-a-inner"><p>We charge one fixed professional fee per matter, quoted up front, and it includes disbursements — the search fees we pay on your behalf. Owners Corporation certificates, PEXA fees and government charges (including stamp duty) are additional.</p></div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" aria-expanded="false">How do I get started?<span class="plus"></span></button>
@@ -307,4 +304,17 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
 </section>
 </main>
 <script is:inline defer src="/assets/js/roofline-scene.js"></script>
+<script is:inline>
+  (() => {
+    const tabs = ['hiw-tab-buy', 'hiw-tab-sell'].map((id) => document.getElementById(id));
+    tabs.forEach((tab) => tab && tab.addEventListener('click', () => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', String(on));
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    }));
+  })();
+</script>
 </Base>
