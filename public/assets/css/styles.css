@@ -324,7 +324,7 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
   height: 6px; border-radius: var(--radius-pill); background: rgba(22,36,31,.10); overflow: hidden;
 }
 .roofline-progress > i {
-  display: block; height: 100%; width: 25%; border-radius: var(--radius-pill);
+  display: block; height: 100%; width: 33.3%; border-radius: var(--radius-pill);
   background: linear-gradient(90deg, #5DCAA5, #2E8A6C);
   transition: width .9s cubic-bezier(.2,.7,.2,1);
 }

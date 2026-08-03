@@ -3,14 +3,15 @@
    (GetLayers Scene Lab; motion follows the GetLayers house idiom:
    interpolate linearly, damp once — the lag is the weight.)
 
-   Light build. The tile IS the dashboard, and the four stages are
-   FIXED — a ladder of four chevron rungs, labels pinned beside
-   them. Pending rungs are quiet ghost outlines; the active rung
-   breathes; and when a stage is ACHIEVED its chevron assembles out
-   of geometric shards that fly in — ends first, apex last — each
-   landing on its own damped clock. Built chevrons stand solid.
-   When all four are done the tile reads Settled, the shards
-   release upward, and a new matter begins.
+   Light build, THREE stages — the ladder IS the logo mark: chevron
+   spans, apex spacing, stroke weight and pitch are taken from
+   lodgedwell-icon.svg (76×76: spans 34/27/20 widest at top, apex
+   gap 13, stroke 5.5, pitch ≈ 0.82). Pending rungs are quiet ghost
+   outlines; the active rung breathes; when a stage is ACHIEVED its
+   chevron assembles out of geometric shards that fly in — ends
+   first, apex last — each landing on its own damped clock. Built
+   chevrons stand solid. When all three are done the tile reads
+   Settled, the shards release upward, and a new matter begins.
 
    Single opaque canvas (#roofline-canvas). All tweakables live in
    CONFIG; colours are '#rrggbb' strings and recolouring happens
@@ -27,23 +28,26 @@
     colBackground:    '#DCEEE4',   // tile ground, low                (background)
     colBackgroundTop: '#F4FAF7',   // tile ground, high — airy light
     colChevronBottom: '#5DCAA5',   // mint — first stage              (secondary)
-    colChevronMid:    '#2E8A6C',   // eucalypt — later stages         (primary)
+    colChevronMid:    '#2E8A6C',   // eucalypt — the work             (primary)
     colChevronTop:    '#0F6E56',   // deep brand green — settlement
     colGlow:          '#5DCAA5',   // accents: ignition, ripple       (accent)
     colInk:           '#16241F',   // stage labels
 
-    /* the fixed ladder (fractions of the panel's min dimension) */
-    chevronWidth:     0.385,  // full span per chevron
-    chevronWidthWide: 0.305,  // span when the panel is a wide band
-    chevronPitch:     0.44,   // roof slope: vertical drop / half-span
-    strokeWidth:      0.038,  // bar thickness
-    stackGap:         0.105,  // vertical distance between the four slots
-    stackOffsetX:    -0.14,   // ladder left of centre — labels sit to its right
-    stackOffsetY:     0.06,   // ladder centre offset below panel centre
-    wideAspect:       1.35,   // W/H beyond which the band layout applies
+    /* the fixed ladder — proportions lifted from lodgedwell-icon.svg
+       (76×76 tile: spans 34/27/20 px widest at TOP, apex gap 13,
+       stroke 5.5, pitch ~0.82). All fractions of the panel's min
+       dimension, scaled together by logoScale. */
+    slotWidths:   [0.263, 0.355, 0.447],  // chevron spans bottom → top
+    logoScale:     1.0,    // overall size of the mark in the tile
+    chevronPitch:  0.82,   // roof slope: vertical drop / half-span
+    strokeWidth:   0.072,  // bar thickness (5.5/76, x logoScale)
+    stackGap:      0.171,  // apex-to-apex spacing (13/76)
+    stackOffsetX: -0.14,   // ladder left of centre — labels sit to its right
+    stackOffsetY:  0.06,   // ladder centre offset below panel centre
+    wideAspect:    1.35,   // W/H beyond which the band layout applies
 
-    /* the four fixed stages, bottom -> top */
-    stages: ['Details submitted', 'Contract review', 'Preparing for settlement', 'Settlement & keys'],
+    /* the three fixed stages, bottom -> top */
+    stages: ['Details submitted', 'Matter worked on', 'Settlement & keys'],
     labelDoneAlpha:    0.9,   // label opacity once its stage is built
     labelActiveAlpha:  0.75,  // label opacity while its stage is next up
     labelPendingAlpha: 0.35,  // label opacity for stages beyond that
@@ -128,11 +132,12 @@
     COL.bgTop = hexToRgb(CONFIG.colBackgroundTop)
     COL.glow  = hexToRgb(CONFIG.colGlow)
     COL.ink   = hexToRgb(CONFIG.colInk)
-    const bottom = hexToRgb(CONFIG.colChevronBottom)
-    const mid = hexToRgb(CONFIG.colChevronMid)
-    const top = hexToRgb(CONFIG.colChevronTop)
-    /* fixed rung colours, bottom -> top: mint deepening to brand green */
-    COL.slots = [bottom, mixRgb(bottom, mid, 0.55), mid, top]
+    /* one colour per rung, bottom -> top: mint deepening to brand green */
+    COL.slots = [
+      hexToRgb(CONFIG.colChevronBottom),
+      hexToRgb(CONFIG.colChevronMid),
+      hexToRgb(CONFIG.colChevronTop),
+    ]
   }
   applyConfig()
 
@@ -153,13 +158,12 @@
   window.addEventListener('resize', resize)
   if (typeof ResizeObserver !== 'undefined') new ResizeObserver(resize).observe(canvas)
 
-  /* Wide band widens the chevrons; the label column keeps the ladder left. */
+  /* The label column keeps the ladder left; wide bands just recentre it. */
   function layout() {
     const wide = W / H > CONFIG.wideAspect
     return {
       ox: CONFIG.stackOffsetX,
       oy: wide ? 0 : CONFIG.stackOffsetY,
-      chevronWidth: wide ? CONFIG.chevronWidthWide : CONFIG.chevronWidth,
     }
   }
 
@@ -173,10 +177,18 @@
   window.addEventListener('pointerleave', () => { pointerTarget.x = 0; pointerTarget.y = 0 }, { passive: true })
 
   /* ---------- geometry ---------- */
-  /* Fixed slot i (0 = bottom stage, 3 = the peak) -> unit-space y offset. */
+  const stageCount = () => CONFIG.stages.length
+  /* Fixed slot i (0 = bottom stage, top = stageCount-1) -> unit-space y offset. */
   function slotOffsetY(oy, i) {
-    return oy + (1.5 - i) * CONFIG.stackGap
+    return oy + ((stageCount() - 1) / 2 - i) * CONFIG.stackGap * CONFIG.logoScale
   }
+  /* Half-span of slot i's chevron, in px — each rung its own size, like the logo. */
+  function slotHalfW(i) {
+    const widths = CONFIG.slotWidths
+    const w = widths[Math.min(i, widths.length - 1)]
+    return (w * CONFIG.logoScale / 2) * unit
+  }
+  const barWidth = () => CONFIG.strokeWidth * CONFIG.logoScale * unit
   /* Point on the chevron polyline: u 0 = left eave end, 0.5 = apex, 1 = right eave end.
      Offsets are relative to the apex. */
   function pathPoint(halfW, pitch, u) {
@@ -200,7 +212,6 @@
   function pieceRanges() {
     const n = Math.round(rand(CONFIG.pieceCountMin, CONFIG.pieceCountMax))
     const minW = CONFIG.pieceMinWidth
-    /* jittered even boundaries, kept at least minW apart */
     const b = [0]
     for (let i = 1; i < n; i++) {
       const even = i / n
@@ -219,7 +230,7 @@
     return out
   }
 
-  /* ---------- the matter: four fixed stages ---------- */
+  /* ---------- the matter: fixed stages ---------- */
   /* stage.state: 'pending' | 'active' | 'assembling' | 'built' | 'releasing' */
   let stages = []
   let currentStage = 1
@@ -231,7 +242,7 @@
   const badgeEl = document.getElementById('roofline-badge')
   const barEl = document.getElementById('roofline-progress-bar')
   function syncChrome() {
-    const pct = completedCount * 25
+    const pct = Math.round(completedCount / stageCount() * 100)
     if (barEl) barEl.style.width = pct + '%'
     if (badgeEl) {
       const done = pct >= 100
@@ -291,7 +302,7 @@
   /* one tick of the matter */
   function stepMatter(t) {
     if (releasingT0 !== null) return              // mid-reset; let it finish
-    if (currentStage >= 4) {
+    if (currentStage >= stageCount()) {
       /* settled — the shards release and a new matter begins */
       releasingT0 = t
       for (const st of stages) {
@@ -313,7 +324,7 @@
     st.igniteT0 = t
     buildPieces(st, false)
     currentStage += 1
-    if (currentStage < 4) stages[currentStage].state = 'active'
+    if (currentStage < stageCount()) stages[currentStage].state = 'active'
   }
 
   function finishRelease() {
@@ -359,6 +370,7 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     ctx.globalCompositeOperation = 'source-over'
 
+    const N = stageCount()
     const L = layout()
     const cy = H / 2
     const px = pointer.x * CONFIG.parallaxAmount * unit
@@ -378,7 +390,7 @@
     ctx.fillStyle = gg
     ctx.fillRect(0, 0, W, H)
 
-    if (stages.length !== 4) return   // not seeded yet (first resize paints ground only)
+    if (stages.length !== N) return   // not seeded yet (first resize paints ground only)
 
     /* ----- the matter's clock ----- */
     if (dt > 0 && t >= nextStepAt) {
@@ -387,12 +399,11 @@
     }
     if (releasingT0 !== null && t - releasingT0 > CONFIG.releaseSeconds) finishRelease()
 
-    const halfW = (L.chevronWidth / 2) * unit
-    const barW = CONFIG.strokeWidth * unit
+    const barW = barWidth()
     ctx.lineJoin = 'round'; ctx.lineCap = 'round'
 
     /* ----- the fixed rungs: ghost outlines (damped presence) ----- */
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < N; i++) {
       const st = stages[i]
       let target = CONFIG.ghostAlpha
       if (st.state === 'active') {
@@ -406,12 +417,12 @@
       const apexY = cy + slotOffsetY(L.oy, i) * unit - py
       ctx.strokeStyle = rgba(COL.slots[i], st.strokeA)
       ctx.lineWidth = barW
-      traceChevron(cx, apexY, halfW, CONFIG.chevronPitch)
+      traceChevron(cx, apexY, slotHalfW(i), CONFIG.chevronPitch)
       ctx.stroke()
     }
 
     /* ----- ignition wash while shards fly in ----- */
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < N; i++) {
       const st = stages[i]
       if (st.igniteT0 === null) continue
       const gT = (t - st.igniteT0) / CONFIG.igniteGlowSeconds
@@ -428,10 +439,11 @@
     }
 
     /* ----- the shards ----- */
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < N; i++) {
       const st = stages[i]
       if (!st.pieces.length) continue
       const col = COL.slots[i]
+      const halfW = slotHalfW(i)
       const apexY = cy + slotOffsetY(L.oy, i) * unit - py
 
       if (st.state === 'assembling') {
@@ -485,7 +497,7 @@
     }
 
     /* ----- the achievement echo ----- */
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < N; i++) {
       const st = stages[i]
       if (st.rippleT0 === null) continue
       const ripT = (t - st.rippleT0) / CONFIG.settleRippleSeconds
@@ -496,22 +508,23 @@
       ctx.strokeStyle = rgba(COL.slots[i], ra)
       ctx.lineWidth = barW * 0.3 * (1 - 0.5 * ripT)
       ctx.lineJoin = 'round'; ctx.lineCap = 'round'
-      traceChevron(cx, apexY, halfW * grow, CONFIG.chevronPitch)
+      traceChevron(cx, apexY, slotHalfW(i) * grow, CONFIG.chevronPitch)
       ctx.stroke()
     }
 
-    /* ----- the fixed stage labels ----- */
+    /* ----- the fixed stage labels (one aligned column) ----- */
     const fontPx = Math.round(Math.max(11, Math.min(15, unit * 0.032)))
     ctx.font = '600 ' + fontPx + 'px "Public Sans", system-ui, sans-serif'
     ctx.textAlign = 'left'
     ctx.textBaseline = 'middle'
-    const labelX = cx + halfW + CONFIG.strokeWidth * unit * 1.2
-    for (let i = 0; i < 4; i++) {
+    const maxHalfW = slotHalfW(N - 1)              // the top rung is the widest
+    const labelX = cx + maxHalfW + barW * 1.2
+    for (let i = 0; i < N; i++) {
       const st = stages[i]
       const apexY = cy + slotOffsetY(L.oy, i) * unit - py
-      const ly = apexY + halfW * CONFIG.chevronPitch * 0.55
-      const done = st.state === 'built' || st.state === 'assembling' || st.state === 'releasing'
-      let a = done ? CONFIG.labelDoneAlpha
+      const ly = apexY + slotHalfW(i) * CONFIG.chevronPitch * 0.55
+      let a = st.state === 'built' || st.state === 'assembling' || st.state === 'releasing'
+        ? CONFIG.labelDoneAlpha
         : st.state === 'active' ? CONFIG.labelActiveAlpha
         : CONFIG.labelPendingAlpha
       if (st.rippleT0 !== null) {
