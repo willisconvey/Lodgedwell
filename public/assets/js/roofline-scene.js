@@ -33,11 +33,11 @@
     colInk:           '#16241F',   // stage labels
 
     /* the fixed ladder (fractions of the panel's min dimension) */
-    chevronWidth:     0.30,   // full span per chevron
-    chevronWidthWide: 0.44,   // span when the panel is a wide band
-    chevronPitch:     0.46,   // roof slope: vertical drop / half-span
-    strokeWidth:      0.05,   // bar thickness
-    stackGap:         0.155,  // vertical distance between the four slots
+    chevronWidth:     0.385,  // full span per chevron
+    chevronWidthWide: 0.305,  // span when the panel is a wide band
+    chevronPitch:     0.44,   // roof slope: vertical drop / half-span
+    strokeWidth:      0.038,  // bar thickness
+    stackGap:         0.105,  // vertical distance between the four slots
     stackOffsetX:    -0.14,   // ladder left of centre — labels sit to its right
     stackOffsetY:     0.06,   // ladder centre offset below panel centre
     wideAspect:       1.35,   // W/H beyond which the band layout applies
@@ -63,10 +63,10 @@
     facetShade:     0.09,     // shade variation between airborne shards
     facetFade:      0.08,     // px distance (x unit) over which the facets merge
     landEps:        1.2,      // px — a shard this close (and unspun) has landed
-    releaseSeconds: 1.0,      // how long the shards take to fly out on reset
+    releaseSeconds: 0.6,      // how long the shards take to fly out on reset
 
     /* pacing: one stage is achieved per cycle */
-    stepSeconds:    6.0,
+    stepSeconds:    2.0,
 
     /* the rungs */
     ghostAlpha:     0.10,     // pending rung outline
