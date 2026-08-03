@@ -30,34 +30,17 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
       </div>
     </div>
 
-    <!-- Dashboard mock -->
+    <!-- Roofline tile: the chevron climb IS the matter tracker -->
     <div class="hero-visual reveal" data-delay="2">
-      <div class="mock" role="img" aria-label="Lodgedwell client dashboard showing a purchase matter progressing to settlement">
-        <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">app.lodgedwell.com.au</span></div>
-        <div class="mock-body">
-          <div class="mock-row">
-            <span class="mock-title">Your purchase · 14 Rosella St</span>
-            <span class="mock-badge">On track</span>
+      <div class="roofline-panel" role="img" aria-label="Your matter climbing stage by stage to settlement — details submitted, contract review, preparing for settlement, settlement and keys">
+        <canvas id="roofline-canvas"></canvas>
+        <div class="roofline-ui" aria-hidden="true">
+          <span class="roofline-chip">app.lodgedwell.com.au</span>
+          <div class="roofline-title-row">
+            <span class="roofline-title">Your purchase · 14 Rosella St</span>
+            <span class="roofline-badge" id="roofline-badge">On track</span>
           </div>
-          <div class="mock-progress"><i></i></div>
-          <div class="tracker">
-            <div class="tracker-step done">
-              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-              <span><span class="tracker-label">Details submitted</span><span class="tracker-sub">Online form completed</span></span>
-            </div>
-            <div class="tracker-step done">
-              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-              <span><span class="tracker-label">Contract review</span><span class="tracker-sub">Section 32 checked</span></span>
-            </div>
-            <div class="tracker-step current">
-              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-              <span><span class="tracker-label">Preparing for settlement</span><span class="tracker-sub">PEXA workspace created</span></span>
-            </div>
-            <div class="tracker-step pending">
-              <span class="tracker-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
-              <span><span class="tracker-label">Settlement &amp; keys</span><span class="tracker-sub">Est. 12 Aug</span></span>
-            </div>
-          </div>
+          <div class="roofline-progress"><i id="roofline-progress-bar"></i></div>
         </div>
       </div>
     </div>
@@ -323,4 +306,5 @@ const description = "Lodgedwell is modern online conveyancing for Victorian prop
   </div>
 </section>
 </main>
+<script is:inline defer src="/assets/js/roofline-scene.js"></script>
 </Base>

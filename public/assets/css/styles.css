@@ -212,11 +212,7 @@ p  { margin: 0 0 1rem; color: var(--ink-700); text-wrap: pretty; }
   gap: 24px; min-height: 68px;
 }
 .brand { display: inline-flex; align-items: center; gap: 8px; }
-.logo-word {
-  font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: 1.375rem;
-  letter-spacing: -.01em; color: var(--ink-900); line-height: 1;
-}
-.logo-word .dot { color: var(--ochre-500); }
+.brand-logo { display: block; height: 36px; width: auto; }
 
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a {
@@ -283,9 +279,55 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
 
 /* ------------------------------------------------------------------ */
-/* Hero dashboard mock                                                */
+/* Hero roofline tile — the chevron climb IS the matter tracker       */
 /* ------------------------------------------------------------------ */
 .hero-visual { position: relative; }
+
+/* One brand tile. The canvas is painted by /assets/js/roofline-scene.js
+   (chevron particle procession = the live tracker). */
+.roofline-panel {
+  position: relative;
+  aspect-ratio: 13 / 14;
+  border-radius: var(--radius-xl); overflow: hidden;
+  background: linear-gradient(180deg, #F4FAF7, #DCEEE4);
+  border: 1px solid var(--line-200);
+  box-shadow: var(--shadow-md);
+}
+.roofline-panel canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* Dashboard chrome living ON the tile (light ground, ink text) */
+.roofline-ui {
+  position: absolute; inset: clamp(18px, 5%, 26px) clamp(18px, 5.5%, 28px) auto;
+  display: grid; gap: 12px; pointer-events: none;
+}
+.roofline-chip {
+  justify-self: start;
+  font-family: var(--font-mono); font-size: .72rem; font-weight: 500;
+  color: var(--ink-400);
+  background: rgba(255,255,255,.6); border: 1px solid var(--line-200);
+  padding: 4px 11px; border-radius: var(--radius-pill);
+}
+.roofline-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.roofline-title {
+  font-family: var(--font-display); font-weight: var(--fw-semibold);
+  font-size: clamp(.95rem, 2.3vw, 1.0625rem); color: var(--ink-900); letter-spacing: -.01em;
+}
+.roofline-badge {
+  font-size: .6563rem; font-weight: var(--fw-bold); text-transform: uppercase; letter-spacing: .05em;
+  padding: 5px 11px; border-radius: var(--radius-pill);
+  background: rgba(30,92,74,.10); color: var(--green-700);
+  border: 1px solid rgba(30,92,74,.20); white-space: nowrap;
+  transition: background .4s var(--ease-standard), color .4s var(--ease-standard);
+}
+.roofline-badge.is-settled { background: var(--green-600); color: #fff; border-color: var(--green-600); }
+.roofline-progress {
+  height: 6px; border-radius: var(--radius-pill); background: rgba(22,36,31,.10); overflow: hidden;
+}
+.roofline-progress > i {
+  display: block; height: 100%; width: 25%; border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, #5DCAA5, #2E8A6C);
+  transition: width .9s cubic-bezier(.2,.7,.2,1);
+}
 .mock {
   background: var(--white); border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg); border: 1px solid var(--line-200);
@@ -574,8 +616,7 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
 /* ------------------------------------------------------------------ */
 .site-footer { background: var(--green-900); color: rgba(255,255,255,.72); }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding: clamp(48px, 7vw, 72px) 0 44px; }
-.footer-brand .logo-word { color: #fff; }
-.footer-brand .logo-word .dot { color: var(--ochre-300); }
+.footer-brand .brand-logo { height: 34px; }
 .footer-brand p { color: rgba(255,255,255,.6); font-size: .9375rem; max-width: 30ch; margin-top: 14px; }
 .footer-col h5 { color: rgba(255,255,255,.5); font-family: var(--font-body); font-weight: var(--fw-bold); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 16px; }
 .footer-col a { display: block; padding: 6px 0; color: rgba(255,255,255,.75); font-size: .9375rem; transition: color var(--dur-fast) var(--ease-standard); }
@@ -609,7 +650,7 @@ body.nav-open .nav-toggle span::after  { transform: rotate(-45deg) translateY(-1
 /* ------------------------------------------------------------------ */
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-visual { max-width: 500px; margin: 12px auto 0; }
+  .hero-visual { width: 100%; max-width: 500px; margin: 12px auto 0; }
   .split, .cols-4 { grid-template-columns: 1fr 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
 }

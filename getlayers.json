@@ -1,0 +1,34 @@
+{
+  "mode": "enhance-project",
+  "project": "lodgedwell-astro (Astro static site, own stack — not the GetLayers starter)",
+  "scenes": [
+    {
+      "id": "custom:lodgedwell-roofline",
+      "title": "Lodgedwell Roofline — chevron particle procession",
+      "origin": "getlayers_scene_lab (original single-scene build; particle vocabulary inspired by scroll-terrain 'Roadmap Terrain', which was materialized with paletteId jade-depths and later retired in favour of this unified scene)",
+      "adapted": "public/assets/js/roofline-scene.js (single opaque canvas #roofline-canvas, canvas-2D, no dependencies)",
+      "placement": "homepage hero — ONE rounded tile (.roofline-panel); the dashboard mock card was removed and its matter-flow merged into the scene: stage labels ride each chevron, settling drives the tile's progress bar + On track/Settled badge (DOM chrome in .roofline-ui)",
+      "paletteRoles": {
+        "background": "#04342C",
+        "primary": "#9FE1CB",
+        "secondary": "#5DCAA5",
+        "accent": "#7EDCB8",
+        "field": "#2E6B55"
+      },
+      "notes": "LIGHT shard build (2026-08-03). FIXED four-stage ladder, labels pinned (ink on light; pending dim, active brighter, built ✓-prefixed). Light tile gradient #F4FAF7 → #DCEEE4 (styles.css .roofline-panel matches; chrome flipped to ink-on-light), NO ambient field, no additive compositing. Rung ramp mint #5DCAA5 → #2E8A6C → #0F6E56 bottom→top. On each stepSeconds (6s) tick the active stage is ACHIEVED: its chevron assembles from 6–9 random-width shards flying in from below with spin (ends first, apex last; house damping dampK = 1-exp(-damp*dt)); shards draw with round caps so they tile seamlessly, carry facet tinting that merges on approach, and once every shard lands the built chevron renders as ONE continuous rounded stroke — the expanding echo + progress tick (25/50/75/100 + On track ↔ Settled badge) fire at that landing. After Settled the shards release upward and fade, and a new matter begins. Active rung = breathing ghost outline; ignition wash when a stage starts assembling. Pauses hidden/off-screen; reduced motion renders one mid-matter frame. Recolour via CONFIG only (PALETTE_ROLES). Gotcha: renderFrame guards on stages.length — the first resize() paints before seed()."
+    }
+  ],
+  "retired": {
+    "scroll-terrain": "three.js terrain layer removed 2026-08-02 (two-layer composition read as separate levels); three uninstalled, src/scripts/roofline-terrain.js deleted"
+  },
+  "filesTouched": [
+    "src/pages/index.astro",
+    "public/assets/js/roofline-scene.js",
+    "public/assets/css/styles.css",
+    "src/components/Header.astro",
+    "src/components/Footer.astro",
+    "public/assets/img/lodgedwell-horizontal.svg",
+    "public/assets/img/lodgedwell-reversed.svg",
+    "public/assets/img/lodgedwell-icon.svg"
+  ]
+}
