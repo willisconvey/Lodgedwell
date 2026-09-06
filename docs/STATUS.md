@@ -14,7 +14,9 @@ Keep it short; history lives in `git log`.
   (get-started 2026-09-07: rating claim removed, fixed fee on trust strip, unverifiable
   "save and resume" claim dropped). Privacy page passed 2026-09-07 (light touch: removed references to calculators, call
   booking and quotes that the site doesn't offer; legal substance untouched).
-  **Remaining full pass: portal.**
+  Portal page passed 2026-09-07 (meta description + the purchase 'contract review'
+  milestone reworded to a post-signing check, matching the rest of the site).
+  **All page copy passes are now DONE.**
 - Privacy page items for the USER to confirm (not changed): "offices in Ferny Creek,
   Melbourne CBD and Bendigo"; "off-the-plan and commercial transactions"; the page is
   noindex and not linked from the footer — add a footer link before launch?
@@ -42,7 +44,7 @@ Keep it short; history lives in `git log`.
 
 ## Next steps (suggested)
 
-1. Copy pass on portal; confirm the privacy-page items above.
+1. Confirm the privacy-page items above.
 2. Confirm sale-tab step wording on the homepage.
 3. Decide when to lift Netlify password protection (launch).
 4. Optional: `/design-login` in an interactive terminal, then sync `design-system/` to

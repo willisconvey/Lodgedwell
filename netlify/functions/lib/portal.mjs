@@ -69,7 +69,7 @@ export const bearerToken = (req) =>
 export const MILESTONES = {
   purchase: [
     { key: 'open', label: 'Getting started', blurb: 'Your matter is open and your conveyancer has your details.', match: ['matter open', 'file open', 'welcome', 'engagement', 'retainer', 'costs disclosure'] },
-    { key: 'review', label: 'Contract & Section 32 review', blurb: 'We review the contract and vendor statement and advise you before you commit.', match: ['contract review', 'review contract', 'section 32', 's32', 'vendor statement', 'advice letter'] },
+    { key: 'review', label: 'Contract & Section 32 check', blurb: 'We go through your contract and the vendor statement and tell you anything you need to know or do.', match: ['contract review', 'review contract', 'section 32', 's32', 'vendor statement', 'advice letter'] },
     { key: 'searches', label: 'Searches & certificates', blurb: 'We order title, planning, rates and other certificates over the property.', match: ['search', 'certificate', 'title', 'planning', 'land tax', 'owners corporation'] },
     { key: 'conditions', label: 'Finance & conditions', blurb: 'Finance approval and any special conditions are confirmed.', match: ['finance', 'loan approval', 'condition', 'building inspection', 'pest inspection', 'cooling off'] },
     { key: 'prep', label: 'Preparing for settlement', blurb: 'PEXA workspace, stamp duty and settlement figures are prepared and checked.', match: ['pexa', 'workspace', 'duty', 'duties', 'sro', 'transfer of land', 'statement of adjustments', 'adjustment', 'nomination', 'book settlement', 'settlement figures', 'funds'] },
