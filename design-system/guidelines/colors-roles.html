@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="1120x230" name="Roles" subtitle="Semantic aliases used in styles.css" -->
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../styles.css">
+<style>
+html, body { margin: 0; background: #FAF6EF; }
+a:hover { color: #164C3B; }
+.reveal { opacity: 1; transform: none; }
+body { padding: 24px; }
+</style>
+</head>
+<body>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; font-family: 'Public Sans', system-ui, sans-serif; font-size: 14px; color: #2C3D37;">
+  <div style="padding: 16px; border: 1px solid #E4DCCF; border-radius: 10px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px;"><span style="font: 600 12px/1 'Public Sans', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #75857E;">Surfaces</span><span>--paper-bg page · --white card · --paper-sunk striped bands · --green-050 tinted panel · --green-900 dark band</span></div>
+  <div style="padding: 16px; border: 1px solid #E4DCCF; border-radius: 10px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px;"><span style="font: 600 12px/1 'Public Sans', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #75857E;">Text</span><span>--ink-900 headings · --ink-700 body · --ink-500 lead/secondary · --ink-400 captions · white on dark bands</span></div>
+  <div style="padding: 16px; border: 1px solid #E4DCCF; border-radius: 10px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px;"><span style="font: 600 12px/1 'Public Sans', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #75857E;">Actions</span><span>--brand green-600 (hover 700, active 900) · --accent ochre-500 (hover 700) · links green-600 → green-700</span></div>
+  <div style="padding: 16px; border: 1px solid #E4DCCF; border-radius: 10px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px;"><span style="font: 600 12px/1 'Public Sans', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #75857E;">Lines and focus</span><span>--line-200 borders · --line-100 dividers · focus ring 3px rgba(42,115,96,.30) · selection green-100 / green-900</span></div>
+</div>
+<p style="margin: 12px 0 0; font-family: 'Public Sans', system-ui, sans-serif; font-size: 14px; color: #52635C; line-height: 1.5;">Legacy aliases still resolve (--coral → ochre, --cream → paper-bg, --paper → white, --muted → ink-500, --line → line-200). Use the real names in new code.</p>
+</body>
+</html>

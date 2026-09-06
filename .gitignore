@@ -6,3 +6,7 @@ dist/
 .env.production
 npm-debug.log*
 .netlify/
+
+# design-system generated outputs
+design/build/
+design/dist/

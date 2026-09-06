@@ -1,0 +1,84 @@
+/* Lodgedwell — design tokens (extracted from public/assets/css/styles.css by design/build.mjs; do not hand-edit) */
+:root {
+  /* Neutrals — warm, paper-forward */
+  --paper-bg:   #FAF6EF;   /* app canvas — warm cream */
+  --paper-sunk: #F1EBE0;   /* recessed / striped surfaces */
+  --white:      #FFFFFF;   /* raised card surface */
+
+  --ink-900: #16241F;
+  --ink-700: #2C3D37;
+  --ink-500: #52635C;
+  --ink-400: #75857E;
+  --ink-300: #A7B2AC;
+
+  --line-200: #E4DCCF;
+  --line-100: #EFE8DB;
+
+  /* Brand — eucalypt green */
+  --green-900: #0E2C22;
+  --green-800: #143B2E;
+  --green-700: #164C3B;
+  --green-600: #1E5C4A;   /* brand primary */
+  --green-500: #2A7360;
+  --green-300: #8FC0B1;
+  --green-100: #DCEBE4;
+  --green-050: #EDF4EF;
+
+  /* Accent — ochre */
+  --ochre-700: #B9791E;
+  --ochre-500: #E8A13A;   /* accent primary */
+  --ochre-300: #F4C888;
+  --ochre-100: #FBEBD1;
+
+  /* Semantic aliases */
+  --brand: var(--green-600);
+  --brand-hover: var(--green-700);
+  --brand-active: var(--green-900);
+  --accent: var(--ochre-500);
+  --accent-hover: var(--ochre-700);
+  --text-on-accent: var(--green-900);
+
+  /* Type */
+  --font-display: 'Plus Jakarta Sans', 'Public Sans', system-ui, sans-serif;
+  --font-body: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700;
+
+  /* Radii */
+  --radius-xs: 4px; --radius-sm: 6px; --radius-md: 10px;
+  --radius-lg: 16px; --radius-xl: 24px; --radius-pill: 999px;
+
+  /* Elevation — soft, warm-tinted (never pure black) */
+  --shadow-xs: 0 1px 2px rgba(22,36,31,.06);
+  --shadow-sm: 0 1px 3px rgba(22,36,31,.08), 0 1px 2px rgba(22,36,31,.04);
+  --shadow-md: 0 4px 12px rgba(22,36,31,.08), 0 2px 4px rgba(22,36,31,.05);
+  --shadow-lg: 0 12px 32px rgba(22,36,31,.12), 0 4px 8px rgba(22,36,31,.06);
+  --shadow-focus: 0 0 0 3px rgba(42,115,96,.30);
+
+  /* Motion — calm, no bounce */
+  --ease-standard: cubic-bezier(.2,0,0,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --dur-fast: 120ms; --dur-base: 200ms; --dur-slow: 320ms;
+
+  /* Layout */
+  --maxw: 1200px;
+  --prose: 680px;
+  --gutter: clamp(20px, 5vw, 48px);
+
+  /* ---- Back-compat aliases (used by existing markup/inline styles) ---- */
+  --cream: var(--paper-bg);
+  --cream-200: var(--paper-sunk);
+  --cream-300: var(--line-200);
+  --paper: var(--white);
+  --ink: var(--ink-900);
+  --ink-soft: var(--ink-700);
+  --muted: var(--ink-500);
+  --coral: var(--ochre-500);
+  --coral-600: var(--ochre-700);
+  --coral-100: var(--ochre-100);
+  --amber: var(--ochre-300);
+  --amber-100: var(--ochre-100);
+  --line: var(--line-200);
+  --line-strong: var(--ink-300);
+  --radius: var(--radius-lg);
+}

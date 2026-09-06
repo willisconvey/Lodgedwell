@@ -1,0 +1,37 @@
+<!-- @dsCard group="Components" viewport="1120x260" name="Buttons" subtitle=".btn · .btn--coral (ochre) · .btn--ghost · .btn--dark · .btn--lg · .btn--block" -->
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../styles.css">
+<style>
+html, body { margin: 0; background: #FAF6EF; }
+a:hover { color: #164C3B; }
+.reveal { opacity: 1; transform: none; }
+body { padding: 24px; }
+</style>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+    <a href="#" class="btn">Start buying <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    <a href="#" class="btn btn--coral">Get started <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    <a href="#" class="btn btn--ghost">See fixed pricing</a>
+    <a href="#" class="btn btn--dark">Sign in</a>
+    <span style="font: 500 12px/1.4 'IBM Plex Mono', monospace; color: #75857E; margin-left: 8px;">42px · radius 10 · Public Sans 600 · 20px padding</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+    <a href="#" class="btn btn--lg">Start online in minutes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    <a href="#" class="btn btn--ghost btn--lg">See fixed pricing</a>
+    <span style="font: 500 12px/1.4 'IBM Plex Mono', monospace; color: #75857E; margin-left: 8px;">--lg 52px · 28px padding · 18px text (hero only)</span>
+  </div>
+  <div style="display: grid; grid-template-columns: 280px 280px minmax(0, 1fr); gap: 12px; align-items: center;">
+    <a href="#" class="btn btn--block">Send code</a>
+    <a href="#" class="btn btn--ghost btn--block">Start selling</a>
+    <span style="font-family: 'Public Sans', system-ui, sans-serif; font-size: 14px; color: #52635C; line-height: 1.5;">Green is the default primary. Ochre is reserved for the one loudest CTA on a page (header "Get started", the sell path). Hover darkens one step and adds shadow-sm; active scales .99. Arrow icon 18px, stroke 2.4.</span>
+  </div>
+</div>
+</body>
+</html>
