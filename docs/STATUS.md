@@ -19,7 +19,7 @@ Keep it short; history lives in `git log`.
   **All page copy passes are now DONE.**
 - Privacy page items for the USER to confirm (not changed): "offices in Ferny Creek,
   Melbourne CBD and Bendigo"; "off-the-plan and commercial transactions"; the page is
-  noindex and not linked from the footer — add a footer link before launch?
+  noindex; footer now links to it (2026-09-07). Drop `noindex` before launch?
 - Homepage how-it-works "Sale" tab step wording is still draft — awaiting the user's final words.
 - Testimonials section removed from the homepage for now (no verifiable reviews yet).
 - Client portal (`/portal`): built, needs Clio→Make connection + Netlify env vars (see
