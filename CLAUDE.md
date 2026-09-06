@@ -85,14 +85,19 @@ Remote: github.com/willisconvey/lodgedwell (branch `main`). Never force-push.
 
 ## Design system
 
-- `design/` holds the editable source: `design/artboards/*.dc.html` (Claude Design canvas
-  artboards built from the REAL `styles.css` + logos), `design/canvas.json`, and
-  `design/build.mjs`, which refreshes `design-system/` (the bundle for claude.ai/design).
-- To update the published design canvas: edit the artboards, then run the `design` skill's
-  seed step (documented in `design/README.md`) and republish the same artifact URL recorded
-  in `docs/STATUS.md`.
-- To push the bundle into claude.ai/design: run `/design-login` once in an interactive
-  `claude` terminal, then use the DesignSync tool (`design-system/` is the localDir).
+- `design/sections/*.html` is the single editable source: one snippet per card, each with an
+  `@section` header (group, name, subtitle, viewport). Snippets use the REAL `styles.css`
+  classes and the real logo files, so they stay pixel-identical to production.
+- `node design/build.mjs` regenerates BOTH `design/build/` (Claude Design canvas artboards +
+  `canvas.json`, gitignored) and `design-system/` (committed bundle for claude.ai/design).
+- Visual check of the bundle: `preview_start` name **`lodgedwell-ds`** (port 8899, serves
+  `design-system/` via `design/serve.mjs`).
+- Published Claude Design canvas (six artboards: brand/colour, typography, components,
+  sections, desktop chrome, mobile chrome): URL in `docs/STATUS.md`. To update it, rebuild,
+  re-seed with the `design` skill (`design/README.md` has the exact command) and republish to
+  the SAME artifact URL.
+- To push the bundle into claude.ai/design proper: the user runs `/design-login` once in an
+  interactive `claude` terminal, then use the DesignSync tool with `design-system/` as localDir.
 - The older, pre-logo design system export lives in OneDrive
   (`~/Library/CloudStorage/OneDrive-WillisConveyancing/Desktop/WC/2026 Refresh/Lodgedwell Design System/`).
   It predates the real logo and the current greens; treat this repo as the source of truth.
@@ -100,8 +105,9 @@ Remote: github.com/willisconvey/lodgedwell (branch `main`). Never force-push.
 ## Gotchas
 
 - This folder lives in iCloud Drive. `npm run dev` via `preview_start` works from here
-  (confirmed 2026-09-07). If a preview ever fails with "Operation not permitted", copy the
-  repo to a non-iCloud folder and serve from there.
+  (confirmed 2026-09-07), but `python3 -m http.server` does NOT (its `os.getcwd()` hits
+  "Operation not permitted" in the preview sandbox). For static previews use a Node server
+  that never touches cwd, like `design/serve.mjs`.
 - The browser pane caches `roofline-scene.js` hard; bust with `fetch(url,{cache:'reload'})`
   then reload.
 - `roofline-scene.js` `renderFrame` must guard `stages.length` — the initial `resize()` paints
