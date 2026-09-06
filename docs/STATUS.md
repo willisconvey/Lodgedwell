@@ -41,11 +41,16 @@ Keep it short; history lives in `git log`.
 
 - Artifact URL: https://claude.ai/code/artifact/e413a449-b11e-47fd-9e85-039bf8f8f121 (published 2026-09-07; republish to this URL, never create a new one)
 - Re-seed/republish steps: `design/README.md`.
+- **claude.ai/design project:** "Lodgedwell Design System", projectId
+  `fff4592d-ab0f-450d-b224-9a2f456d4249` — all 26 bundle files synced 2026-09-07 via
+  DesignSync (the user ran `/design-login` once in ~/.local/bin/claude). To re-sync after
+  a rebuild: list_files → finalize_plan (same globs, deletes []) → write_files.
+  Sync is ONE-WAY repo → Design; bring Design-side tweaks back into styles.css by hand.
 
 ## Next steps (suggested)
 
 1. Confirm the privacy-page items above.
 2. Confirm sale-tab step wording on the homepage.
 3. Decide when to lift Netlify password protection (launch).
-4. Optional: `/design-login` in an interactive terminal, then sync `design-system/` to
-   claude.ai/design with DesignSync.
+4. If the user tweaks things in claude.ai/design, port those changes back into
+   `styles.css` / `design/sections/` and re-sync.

@@ -96,8 +96,12 @@ Remote: github.com/willisconvey/lodgedwell (branch `main`). Never force-push.
   sections, desktop chrome, mobile chrome): URL in `docs/STATUS.md`. To update it, rebuild,
   re-seed with the `design` skill (`design/README.md` has the exact command) and republish to
   the SAME artifact URL.
-- To push the bundle into claude.ai/design proper: the user runs `/design-login` once in an
-  interactive `claude` terminal, then use the DesignSync tool with `design-system/` as localDir.
+- claude.ai/design project "Lodgedwell Design System" (projectId
+  `fff4592d-ab0f-450d-b224-9a2f456d4249`) mirrors `design-system/`. Re-sync with the DesignSync
+  tool (`design-system/` as localDir; writes globs `readme.md, SKILL.md, styles.css,
+  tokens/tokens.css, assets/*.svg, guidelines/*.html, components/*.html, ui_kits/website/*.html`).
+  Authorization is already stored on this Mac; if it ever lapses the user re-runs `/design-login`
+  in `~/.local/bin/claude`. Sync is one-way from the repo.
 - The older, pre-logo design system export lives in OneDrive
   (`~/Library/CloudStorage/OneDrive-WillisConveyancing/Desktop/WC/2026 Refresh/Lodgedwell Design System/`).
   It predates the real logo and the current greens; treat this repo as the source of truth.
