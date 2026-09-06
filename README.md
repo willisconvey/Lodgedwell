@@ -74,7 +74,7 @@ on-site SMS gate verifies the visitor's mobile (the verified number is passed
 into the form's hidden `phone` field). This replaced the old three-step Tally
 flow; the old `/purchase-flow/*`, `/purchase-verify` and `/purchase-details`
 URLs now redirect to `/get-started`. **Selling** embeds the Tally property
-sales form (`9q5aBQ`). The `<Base tally={true}>` prop loads Tally's embed
+form (`D4942p`; the older `9q5aBQ` is closed). The `<Base tally={true}>` prop loads Tally's embed
 script. Deep links `/get-started#buy` and `/get-started#sell` open the right
 tab.
 

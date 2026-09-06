@@ -10,13 +10,18 @@ Keep it short; history lives in `git log`.
   has auto-deployed it. The three-chevron roofline tile (`8824e37`) is therefore live.
 - Netlify password protection: **assumed still ON** (curl to lodgedwell.com.au returns 401).
   Ask the user before assuming the site is public.
-- Final copy/design pass: home, how-it-works, pricing, services, about — DONE.
-  Get-started and portal received contact-detail updates only.
-  **Remaining full passes: get-started, privacy, portal.**
+- Final copy/design pass: home, how-it-works, pricing, services, about, get-started — DONE
+  (get-started 2026-09-07: rating claim removed, fixed fee on trust strip, unverifiable
+  "save and resume" claim dropped). **Remaining full passes: privacy, portal.**
 - Homepage how-it-works "Sale" tab step wording is still draft — awaiting the user's final words.
 - Testimonials section removed from the homepage for now (no verifiable reviews yet).
 - Client portal (`/portal`): built, needs Clio→Make connection + Netlify env vars (see
   `docs/client-portal.md`). Twilio env vars must be set in Netlify for the SMS gates.
+
+## Facts corrected 2026-09-07
+
+- The sell tab embeds Tally **Sale Form `D4942p`** (commit 13305f8); `9q5aBQ` is closed.
+  README/CLAUDE.md updated to match.
 
 ## Tooling set up this session (2026-09-07)
 
@@ -32,7 +37,7 @@ Keep it short; history lives in `git log`.
 
 ## Next steps (suggested)
 
-1. Copy pass on get-started, privacy, portal.
+1. Copy pass on privacy, portal.
 2. Confirm sale-tab step wording on the homepage.
 3. Decide when to lift Netlify password protection (launch).
 4. Optional: `/design-login` in an interactive terminal, then sync `design-system/` to

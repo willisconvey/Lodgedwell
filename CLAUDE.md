@@ -79,7 +79,7 @@ Remote: github.com/willisconvey/lodgedwell (branch `main`). Never force-push.
   Privacy page has its own contact block (privacy@lodgedwell.com.au, 03 9071 3050,
   Willis Property Group Pty Ltd ABN 36 659 238 721, PO Box 35 Sassafras).
 - Onboarding forms are Tally (workspace 3EZYWA): buying = merged purchase form `81gAgr`
-  behind the on-site SMS gate; selling = property sales form `9q5aBQ`. Tally submissions
+  behind the on-site SMS gate; selling = Sale Form `D4942p` (the older `9q5aBQ` is closed). Tally submissions
   create InTouch matters via Make (see memory notes; not part of this repo).
 - Copyright line is "Lodgedwell" (not "Lodgedwell Pty Ltd").
 
